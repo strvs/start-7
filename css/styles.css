@@ -1,0 +1,1203 @@
+*,
+*::before,
+*::after {outline:none; box-sizing:border-box}
+
+html {min-width:360px; height:100%}
+
+body {min-width:360px; height:100%; margin:0; padding:0; font:18px/25px NunitoSans, sans-serif; color:#35454E; background:#FFFFFF; -webkit-text-size-adjust:100%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-anchor:none}
+
+@media (max-width:1199px) {
+    body {font-size:16px; line-height:22px}
+}
+
+a {color:#DF2C31; text-decoration:none; transition:color 0.3s ease-in}
+@media (min-width:1200px) {
+    a:hover {color:#FF271A}
+}
+
+img {border:none; width:auto; max-width:100%; height:auto}
+
+::-ms-clear {display:none}
+
+strong, b {font-weight:bold}
+
+p {margin:10px 0; padding:0}
+ul {margin:16px 0 32px 0; padding:0; list-style:none}
+ul li {margin:16px 0; padding:0 0 0 52px; position:relative}
+ul li::before {content:""; position:absolute; left:30px; top:9px; width:8px; height:8px; background:#DF2C31}
+
+@media (max-width:1199px) {
+    p {margin:8px 0}
+    ul {margin:12px 0 24px 0}
+    ul li {margin:12px 0; padding:0 0 0 42px}
+    ul li::before {left:22px; top:8px; width:6px; height:6px}
+}
+
+.wrapper table {width:100%; border:1px solid #85959E; border-collapse:collapse; margin:16px 0; color:#5D6D76}
+.wrapper td {padding:15px; border:1px solid #85959E; vertical-align:top}
+.wrapper td *:first-child {margin-top:0}
+.wrapper td *:last-child {margin-bottom:0}
+
+@media (max-width:1199px) {
+    .wrapper table {width:auto; display:block}
+    .wrapper tbody {display:block}
+    .wrapper tr {display:block; border-top:1px solid #85959E; padding:12px 11px}
+    .wrapper tr:first-child {border-top:none}
+    .wrapper td {display:block; padding:0; border:none}
+}
+
+.btn {display:inline-flex; vertical-align:top; margin:0; padding:0 56px; background:#DF2C31; overflow:visible; height:72px; align-items:center; justify-content:center; outline:none; position:relative; border:none; border-radius:0; color:#FFFFFF; text-decoration:none; font:bold 18px/25px NunitoSans, sans-serif; letter-spacing:0.01em; text-transform:uppercase; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; text-align:center; transition:background 0.3s ease-in, -webkit-clip-path 0.3s ease-in, clip-path 0.3s ease-in; -webkit-clip-path:polygon(24px 0, 100% 0, 100% 31px, calc(100% - 24px) 100%, 0 100%, 0 41px); clip-path:polygon(24px 0, 100% 0, 100% 31px, calc(100% - 24px) 100%, 0 100%, 0 41px)}
+@media (min-width:1200px) {
+    .btn:hover {color:#FFFFFF; background:#FF271A; -webkit-clip-path:polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); clip-path:polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0)}
+}
+.btn svg {min-width:24px; max-width:24px; height:24px; margin:0 0 0 12px; fill:none; stroke:#FFFFFF}
+.btn.disabled,
+.btn:disabled {opacity:0.5; pointer-events:none; cursor:default}
+
+@media (max-width:1199px) {
+    .btn {height:64px; font-size:16px; line-height:22px; letter-spacing:0.015em; padding:0 47px; -webkit-clip-path:polygon(21px 0, 100% 0, 100% 27px, calc(100% - 21px) 100%, 0 100%, 0 36px); clip-path:polygon(21px 0, 100% 0, 100% 27px, calc(100% - 21px) 100%, 0 100%, 0 36px)}
+}
+
+.btn.medium {height:64px; font-size:16px; line-height:22px; letter-spacing:0.015em; padding:0 47px; -webkit-clip-path:polygon(21px 0, 100% 0, 100% 27px, calc(100% - 21px) 100%, 0 100%, 0 36px); clip-path:polygon(21px 0, 100% 0, 100% 27px, calc(100% - 21px) 100%, 0 100%, 0 36px)}
+@media (min-width:1200px) {
+    .btn.medium:hover {-webkit-clip-path:polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); clip-path:polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0)}
+}
+
+.btn.small {height:56px; font-size:14px; line-height:20px; letter-spacing:0.02em; padding:0 22px; -webkit-clip-path:polygon(14px 0, 100% 0, 100% 24px, calc(100% - 14px) 100%, 0 100%, 0 32px); clip-path:polygon(14px 0, 100% 0, 100% 24px, calc(100% - 14px) 100%, 0 100%, 0 32px)}
+@media (min-width:1200px) {
+    .btn.small:hover {-webkit-clip-path:polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); clip-path:polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0)}
+}
+
+.btn-border {display:inline-flex; vertical-align:top; margin:0; padding:0 56px; overflow:visible; height:72px; align-items:center; justify-content:center; outline:none; position:relative; background:transparent; border:none; border-radius:0; color:#FFFFFF; text-decoration:none; font:bold 18px/25px NunitoSans, sans-serif; letter-spacing:0.01em; text-transform:uppercase; -webkit-appearance:none; cursor:pointer; box-sizing:border-box; text-align:center}
+@media (min-width:1200px) {
+    .btn-border:hover {color:#FFFFFF}
+}
+.btn-border-left {position:absolute; left:0; top:0; width:50%; bottom:0; background:url(../images/btn-border.svg) no-repeat}
+.btn-border-left::before {content:""; position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/btn-border.svg) no-repeat left -74px; opacity:0; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .btn-border:hover .btn-border-left::before {opacity:1}
+}
+.btn-border-right {position:absolute; right:0; top:0; width:50%; bottom:0; background:url(../images/btn-border.svg) no-repeat right top}
+.btn-border-right::before {content:""; position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/btn-border.svg) no-repeat right -74px; opacity:0; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .btn-border:hover .btn-border-right::before {opacity:1}
+}
+.btn-border strong {display:flex; align-items:center; font-weight:bold; position:relative}
+.btn-border svg {min-width:24px; max-width:24px; height:24px; margin:0 0 0 12px; fill:none; stroke:#FF271A}
+.btn-border.disabled,
+.btn-border:disabled {opacity:0.5; pointer-events:none; cursor:default}
+
+@media (max-width:1199px) {
+    .btn-border {height:64px; font-size:16px; line-height:22px; letter-spacing:0.015em; padding:0 47px}
+    .btn-border .btn-border-left {background:url(../images/btn-border-medium.svg) no-repeat}
+    .btn-border .btn-border-left::before {background:url(../images/btn-border-medium.svg) no-repeat left -66px}
+    .btn-border .btn-border-right {background:url(../images/btn-border-medium.svg) no-repeat right top}
+    .btn-border .btn-border-right::before {background:url(../images/btn-border-medium.svg) no-repeat right -66px}
+}
+
+.btn-border.medium {height:64px; font-size:16px; line-height:22px; letter-spacing:0.015em; padding:0 47px}
+.btn-border.medium .btn-border-left {background:url(../images/btn-border-medium.svg) no-repeat}
+.btn-border.medium .btn-border-left::before {background:url(../images/btn-border-medium.svg) no-repeat left -66px}
+.btn-border.medium .btn-border-right {background:url(../images/btn-border-medium.svg) no-repeat right top}
+.btn-border.medium .btn-border-right::before {background:url(../images/btn-border-medium.svg) no-repeat right -66px}
+
+.form-input {position:relative; margin:24px 0}
+.form-input-label {position:absolute; left:0; top:23px; font-weight:normal; font-size:18px; line-height:25px; letter-spacing:0; color:#5D6D76; transition:all 0.3s ease-in; z-index:1; pointer-events:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; right:0}
+.form-input.focus .form-input-label,
+.form-input.full .form-input-label {top:0; font-size:16px; line-height:22px}
+
+.form-input input,
+.form-input textarea {position:relative; border:none; border-bottom:3px solid #E6EEF1; font:18px/25px NunitoSans, sans-serif; color:#05171D; vertical-align:top; margin:0; padding:34px 0 10px 0; width:100%; height:72px; box-sizing:border-box; outline:none; border-radius:0; background:#FFFFFF; -webkit-appearance:none; transition:border-color 0.3s ease-in}
+.form-input textarea {height:124px; overflow:auto; resize:vertical}
+.form-input input.error,
+.form-input textarea.error {border-color:#F34045}
+@media (min-width:1200px) {
+    .form-input input:hover,
+    .form-input textarea:hover {border-color:#DF2C31}
+}
+.form-input input:focus,
+.form-input textarea:focus {border-color:#DF2C31}
+.form-input label.error {display:block; color:#F34045; font-size:13px; line-height:18px; margin:8px 0 0 0}
+
+.form-input textarea::-webkit-scrollbar-thumb {background:#DF2C31; border-radius:2px}
+.form-input textarea::-webkit-scrollbar {width:4px; height:4px; background:#F4F7F8; border-radius:2px}
+
+.form-input input::-webkit-input-placeholder {opacity:1; color:#5D6D76}
+.form-input input::-moz-placeholder {opacity:1; color:#5D6D76}
+.form-input input:-ms-input-placeholder {opacity:1; color:#5D6D76}
+
+.form-input input:-webkit-autofill,
+.form-input input:-webkit-autofill:active,
+.form-input input:-webkit-autofill:focus,
+.form-input input:-webkit-autofill:hover {-webkit-text-fill-color:#05171D; caret-color:#05171D; -webkit-transition:background-color 999999s ease-in-out 0s; transition:background-color 999999s ease-in-out 0s}
+
+.form-submit {margin:56px 0 0 0}
+.form-submit .btn {display:flex; width:100%}
+
+@media (max-width:1199px) {
+    .form-submit {margin:64px 0 0 0}
+}
+
+@media (max-width:767px) {
+    .form-submit {margin:40px 0 0 0}
+}
+
+.form-policy {margin:16px 0 0 0; font-size:13px; line-height:18px; color:#5D6D76}
+
+.pager {margin:80px 0 0 0; display:flex; align-items:center; font:24px/34px Gamestation, sans-serif}
+.pager a,
+.pager span {margin:0 0 0 24px; min-width:48px; max-width:48px; height:48px; display:flex; align-items:center; justify-content:center; color:#5D6D76; text-align:center}
+.pager a:first-child,
+.pager span:first-child {margin:0}
+@media (min-width:1200px) {
+    .pager a:hover {color:#DF2C31}
+}
+.pager a.active {color:#DF2C31}
+.pager a.pager-prev,
+.pager a.pager-next {min-width:96px; max-width:96px; height:32px}
+.pager a.pager-prev svg,
+.pager a.pager-next svg {width:96px; height:32px; fill:none; stroke:#DF2C31; transition:stroke 0.3s ease-in}
+@media (min-width:1200px) {
+    .pager a.pager-prev:hover svg,
+    .pager a.pager-next:hover svg {stroke:#FF271A}
+}
+.pager a.pager-next span {display:none}
+
+@media (max-width:1199px) {
+    .pager {margin:56px 0 0 0}
+}
+
+@media (max-width:767px) {
+    .pager {margin:24px 0 0 0; justify-content:center; display:block}
+    .pager a,
+    .pager span {display:none}
+    .pager a.pager-next {display:flex; margin:0; align-items:center; justify-content:center; min-width:0; max-width:none; height:64px}
+    .pager a.pager-next svg {display:none}
+    .pager a.pager-next span {display:flex; align-items:center; font-weight:bold; font-size:16px; line-height:22px; letter-spacing:0.015em; text-transform:uppercase; color:#05171D; margin:0; min-width:0; max-width:none}
+    .pager a.pager-next span svg {display:block; margin:0 0 0 12px; width:16px; height:16px; stroke:#DF2C31}
+}
+
+.container {width:100%; max-width:1656px; padding:0 48px; margin:0 auto}
+
+@media (max-width:767px) {
+    .container {padding:0 20px}
+}
+
+.wrapper {display:flex; flex-direction:column; width:100%; min-width:360px; min-height:100%; position:relative; overflow:hidden}
+.wrapper-inner {height:100%; flex:1; padding:80px 0 0 0}
+
+@media (max-width:1199px) {
+    .wrapper-inner {padding:72px 0 0 0}
+}
+
+header {position:fixed; left:0; top:0; right:0; z-index:20; transition:background 0.3s ease-in}
+header.fixed {background:rgba(255, 255, 255, 0.65)}
+header .container {display:flex; align-items:center; justify-content:space-between; height:80px}
+
+@media (max-width:1199px) {
+    header .container {height:72px}
+}
+
+.logo {min-width:266px; max-width:266px; position:relative}
+.logo a {display:block; position:relative}
+.logo svg {display:block; width:266px; height:40px; fill:none}
+.logo svg:nth-child(2) {display:none}
+.header-main .logo svg:nth-child(1) {display:none}
+.header-main .logo svg:nth-child(2) {display:block}
+header.header-main.fixed .logo svg:nth-child(1) {display:block}
+header.header-main.fixed .logo svg:nth-child(2) {display:none}
+
+@media (max-width:1199px) {
+    .logo {min-width:196px; max-width:196px}
+    .logo svg {width:196px; height:30px}
+}
+
+.header-menu-link {min-width:80px; max-width:80px; height:80px; display:flex; align-items:center; justify-content:center; background:#DF2C31; transition:background 0.3s ease-in}
+@media (min-width:1200px) {
+    .header-menu-link:hover {background:#FF271A}
+}
+.header-menu-link svg {width:40px; height:40px; fill:none; stroke:#FFFFFF}
+
+@media (max-width:1199px) {
+    .header-menu-link {min-width:72px; max-width:72px; height:72px; margin:0 -48px 0 0}
+}
+
+@media (max-width:767px) {
+    .header-menu-link {margin:0 -20px 0 0}
+}
+
+.menu-open,
+.menu-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.menu {display:none; position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:9999; background:#05171D url(../images/window-bg.svg) no-repeat right 161px}
+.menu-open .menu {display:block}
+.menu-header {display:flex; justify-content:flex-end}
+.menu-close-link {min-width:80px; max-width:80px; height:80px; display:flex; align-items:center; justify-content:center; background:#DF2C31; transition:background 0.3s ease-in}
+@media (min-width:1200px) {
+    .menu-close-link:hover {background:#FF271A}
+}
+.menu-close-link svg {width:40px; height:40px; fill:none; stroke:#FFFFFF}
+.menu-container {display:flex; min-height:calc(100vh - 225px); padding:80px 0 0 0}
+.menu-main {min-width:504px; max-width:504px}
+.menu-main-menu {font:32px/42px Gamestation, sans-serif; text-transform:uppercase}
+.menu-main-menu ul {margin:0; padding:0; list-style:none}
+.menu-main-menu ul li {margin:40px 0 0 0; padding:0}
+.menu-main-menu ul li:first-child {margin:0}
+.menu-main-menu ul li::before {display:none}
+.menu-main-menu ul li a {color:#FFFFFF}
+@media (min-width:1200px) {
+    .menu-main-menu ul li a:hover {color:#DF2C31}
+}
+.menu-main-menu ul li.active a {color:#DF2C31}
+.menu-main-btns {margin:96px 0 0 0; max-width:372px}
+.menu-main-btn {margin:24px 0 0 0}
+.menu-main-btn a {display:flex}
+.menu-add {margin:0 0 0 156px; min-width:372px; max-width:372px}
+.menu-add-menu {border-left:2px solid #5D6D76; padding:16px 0 16px 38px; font:24px/34px Gamestation, sans-serif; text-transform:uppercase}
+.menu-add-menu ul {margin:0; padding:0; list-style:none}
+.menu-add-menu ul li {margin:32px 0 0 0; padding:0}
+.menu-add-menu ul li:first-child {margin:0}
+.menu-add-menu ul li::before {display:none}
+.menu-add-menu ul li a {color:#B7C7D0}
+@media (min-width:1200px) {
+    .menu-add-menu ul li a:hover {color:#DF2C31}
+}
+.menu-add-menu ul li.active a {color:#DF2C31}
+.menu-policy {padding:60px 0; color:#85959E}
+.menu-policy a {color:#85959E}
+@media (min-width:1200px) {
+    .menu-policy a:hover {color:#FFFFFF}
+}
+
+@media (max-width:1199px) {
+    .menu {background:rgba(0, 13, 17, 0.9) url(../images/window-bg-tablet.svg) no-repeat left top}
+    .menu-close-link {min-width:72px; max-width:72px; height:72px; margin:0 -48px 0 0}
+    .menu-container {min-height:calc(100vh - 138px); padding:94px 0 0 0}
+    .menu-main {min-width:320px; max-width:320px}
+    .menu-main-menu {font-size:22px; line-height:31px}
+    .menu-main-menu ul li {margin:24px 0 0 0}
+    .menu-main-btns {margin:80px 0 0 0; max-width:320px}
+    .menu-main-btn {margin:16px 0 0 0}
+    .menu-add {margin:0 0 0 115px; min-width:237px; max-width:237px}
+    .menu-add-menu {padding:12px 0 12px 22px; font-size:18px; line-height:25px}
+    .menu-add-menu ul li {margin:16px 0 0 0}
+    .menu-policy {padding:22px 0}
+}
+
+@media (max-width:767px) {
+    .menu {background-image:none}
+    .menu-close-link {margin:0 -20px 0 0}
+    .menu-container {display:block; min-height:calc(100vh - 180px); padding:40px 0 0 0}
+    .menu-main {min-width:0; max-width:none}
+    .menu-main-menu {padding:0 0 0 12px}
+    .menu-main-btns {margin:48px 0 0 0; max-width:none}
+    .menu-add {margin:48px 0 0; min-width:0; max-width:none}
+    .menu-add-menu {border-left:none; border-top:3px solid #5D6D76; padding:29px 24px 0 24px}
+    .menu-policy {padding:40px 24px 23px 24px}
+}
+
+.page-header {display:flex; align-items:flex-end; justify-content:center; height:300px; padding:0 0 24px 0; background:url(../images/page-header.jpg) no-repeat center; background-size:cover}
+.page-header h1 {margin:0; padding:0; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#FFFFFF}
+
+@media (max-width:1199px) {
+    .page-header {height:240px; padding:0 0 16px 0}
+    .page-header h1 {font-size:30px; line-height:42px}
+}
+
+@media (max-width:767px) {
+    .page-header {height:120px}
+    .page-header h1 {display:none}
+}
+
+.breadcrumbs {margin:32px 0 0 0; font-size:16px; line-height:22px; color:#B7C7D0}
+.breadcrumbs a {color:#85959E}
+@media (min-width:1200px) {
+    .breadcrumbs a:hover {color:#FF271A}
+}
+.breadcrumbs span {display:inline-block; vertical-align:middle; margin:-2px 24px 0 24px; width:6px; height:6px; background:#DF2C31}
+
+@media (max-width:1199px) {
+    .breadcrumbs {margin:16px 0 0 0; font-size:15px; line-height:21px}
+    .breadcrumbs span {margin:-2px 16px 0 16px}
+}
+
+@media (max-width:767px) {
+    .breadcrumbs {margin:24px 0 0 0}
+}
+
+.page-title-mobile {display:none}
+
+@media (max-width:767px) {
+    .page-title-mobile {display:block; margin:64px 0 0 0; font:30px/39px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+}
+
+.page-anonce {margin:120px 0 0 0; display:flex; align-items:center; justify-content:flex-end}
+.page-anonce-catalogue {min-width:calc(50% - 12px); max-width:calc(50% - 12px); margin:0 24px 0 0; display:flex}
+.page-anonce-catalogue a {display:flex; align-items:center; font-weight:bold; font-size:12px; line-height:17px; letter-spacing:0.025em; text-transform:uppercase; color:#05171D}
+@media (min-width:1200px) {
+    .page-anonce-catalogue a:hover {color:#FF271A}
+}
+.page-anonce-catalogue a svg {width:40px; height:40px; fill:none; margin:0 16px 0 0}
+.page-anonce-text {min-width:calc(50% - 12px); max-width:calc(50% - 12px); font:24px/34px Gamestation, sans-serif; color:#85959E; text-transform:uppercase}
+
+@media (max-width:1199px) {
+    .page-anonce {margin:48px 0 0 0; align-items:flex-start}
+    .page-anonce-catalogue {min-width:261px; max-width:261px}
+    .page-anonce-text {min-width:0; max-width:none; width:calc(100% - 285px); font-size:18px; line-height:25px}
+}
+
+@media (max-width:767px) {
+    .page-anonce {margin:32px 0 0 0; display:block}
+    .page-anonce-catalogue {display:none}
+    .page-anonce-text {font-size:19px; line-height:27px; width:auto}
+}
+
+.catalogue {margin:120px -12px -32px -12px; display:flex; flex-wrap:wrap}
+.catalogue-item {display:flex; min-width:33.33%; max-width:33.33%; padding:0 12px 32px 12px}
+.catalogue-item-wrap {position:relative; display:flex; width:100%}
+.catalogue-item-parent {display:flex; width:100%; background:#F4F7F8; padding:3px; -webkit-clip-path:polygon(83px 0, 100% 0, 100% calc(100% - 147px), calc(100% - 83px) 100%, 0 100%, 0 147px); clip-path:polygon(83px 0, 100% 0, 100% calc(100% - 147px), calc(100% - 83px) 100%, 0 100%, 0 147px); pointer-events:none}
+.catalogue-item-parent-container {background:#FFFFFF; display:flex; flex-direction:column; width:100%; padding:137px 0 42px 0; -webkit-clip-path:polygon(80px 0, 100% 0, 100% calc(100% - 144px), calc(100% - 80px) 100%, 0 100%, 0 144px); clip-path:polygon(80px 0, 100% 0, 100% calc(100% - 144px), calc(100% - 80px) 100%, 0 100%, 0 144px)}
+.catalogue-item-parent-preview {margin:0 -3px 0 29px; min-height:236px; background:no-repeat center; background-size:cover; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .catalogue-item-wrap:hover .catalogue-item-parent-preview {opacity:0}
+}
+.catalogue-item-parent-title {margin:40px 89px 0 29px; font:22px/31px Gamestation, sans-serif; text-transform:uppercase; color:#05171D; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .catalogue-item-wrap:hover .catalogue-item-parent-title {opacity:0}
+}
+.catalogue-item-parent-number {position:absolute; right:0; top:0; width:80px; height:80px; display:flex; align-items:center; justify-content:center; font:32px/42px Gamestation, sans-serif; color:#E6EEF1; pointer-events:none}
+.catalogue-item-sub {visibility:hidden; opacity:0; position:absolute; left:32px; top:140px; right:32px; bottom:74px; overflow:hidden; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .catalogue-item-wrap:hover .catalogue-item-sub {visibility:visible; opacity:1}
+}
+.catalogue-item-sub ul {margin:0; padding:0; list-style:none; font-weight:600; font-size:16px; line-height:22px}
+.catalogue-item-sub ul li {margin:16px 0 0 0; padding:0; display:flex}
+.catalogue-item-sub ul li:first-child {margin:0}
+.catalogue-item-sub ul li::before {display:none}
+.catalogue-item-sub ul li a {display:flex; align-items:flex-start; color:#05171D}
+@media (min-width:1200px) {
+    .catalogue-item-sub ul li a:hover {color:#DF2C31}
+}
+.catalogue-item-sub ul li a svg {min-width:24px; max-width:24px; height:24px; fill:none; stroke:#DF2C31; margin:0 16px 0 0}
+.catalogue-item-sub ul li a span {padding:3px 0 0 0}
+
+@media (max-width:1199px) {
+    .catalogue {margin:96px -12px -32px -12px}
+    .catalogue-inner .catalogue-item {display:block; min-width:50%; max-width:50%; padding:0 12px 32px 12px}
+    .catalogue-inner .catalogue-item-wrap {display:block}
+    .catalogue-inner .catalogue-item-parent {display:block; background:none; padding:0; -webkit-clip-path:none; clip-path:none}
+    .catalogue-inner .catalogue-item-parent-container {display:block; background:none; padding:0; -webkit-clip-path:none; clip-path:none}
+    .catalogue-inner .catalogue-item-parent-preview {margin:0; min-height:0; width:160px; height:80px; -webkit-clip-path:polygon(14px 0, 100% 0, 100% 56px, 146px 100%, 0 100%, 0 24px); clip-path:polygon(14px 0, 100% 0, 100% 56px, 146px 100%, 0 100%, 0 24px)}
+    .catalogue-inner .catalogue-item-parent-title {margin:40px 0 0 0; font-size:18px; line-height:25px}
+    .catalogue-inner .catalogue-item-parent-number {top:12px; width:56px; height:56px; font-size:22px; line-height:31px; color:#DF2C31}
+    .catalogue-inner .catalogue-item-sub {visibility:visible; opacity:1; position:relative; left:auto; top:auto; right:auto; bottom:auto; margin:24px 0 0 16px}
+    .catalogue-inner .catalogue-item-sub ul {font-size:15px; line-height:21px}
+    .catalogue-inner .catalogue-item-sub ul li {margin:12px 0 0 0}
+    .catalogue-inner .catalogue-item-sub ul li:first-child {margin:0}
+    .catalogue-inner .catalogue-item-sub ul li a svg {width:16px; height:16px; margin:0 8px 0 0}
+    .catalogue-inner .catalogue-item-sub ul li a span {padding:0}
+}
+
+@media (max-width:767px) {
+    .catalogue {margin:64px 0 0 0}
+    .catalogue-inner {display:block}
+    .catalogue-inner .catalogue-item {min-width:0; max-width:none; padding:0; margin:24px 0 0 0}
+    .catalogue-inner .catalogue-item-parent-preview {height:56px; visibility:hidden}
+    .catalogue-inner .catalogue-item-parent-number {top:0}
+    .catalogue-inner .catalogue-item-parent-title {margin:16px 0 0 0; font-size:17px; line-height:24px}
+    .catalogue-inner .catalogue-item-sub {margin:20px 0 0 16px}
+}
+
+.catalogue-detail {margin:120px 0 0 0; display:flex; justify-content:space-between}
+
+@media (max-width:1199px) {
+    .catalogue-detail {margin:48px 0 0 0; display:block}
+    .catalogue-detail::after {content:""; display:block; clear:both}
+}
+
+@media (max-width:767px) {
+    .catalogue-detail {margin:64px 0 0 0}
+    .catalogue-detail::after {display:none}
+}
+
+.catalogue-detail-title-tablet {display:none}
+.catalogue-detail-number-tablet {display:none}
+
+@media (max-width:1199px) {
+    .catalogue-detail-title-tablet {display:block; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+    .catalogue-detail-number-tablet {display:block; margin:16px 0 0 0; font:17px/24px Gamestation, sans-serif; text-transform:uppercase; color:#85959E}
+}
+
+@media (max-width:767px) {
+    .catalogue-detail-title-tablet {font-size:22px; line-height:31px}
+}
+
+.catalogue-detail-media {min-width:42.56%; max-width:42.56%}
+.catalogue-detail-gallery {padding:0 28px 0 0; position:relative}
+.catalogue-detail-gallery-slider {position:relative; overflow:hidden}
+.catalogue-detail-gallery .swiper-wrapper {display:flex}
+.catalogue-detail-gallery-slide {min-width:100%; max-width:100%}
+.catalogue-detail-gallery-slide img {display:block; width:100%}
+.catalogue-detail-arrows {position:absolute; left:0; bottom:0; z-index:2; display:flex}
+.catalogue-detail-arrows-sep {min-width:2px; max-width:2px; height:48px; background:#F4F7F8}
+.catalogue-detail-arrows .swiper-button-prev,
+.catalogue-detail-arrows .swiper-button-next {position:relative; z-index:2; top:auto; width:56px; height:48px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transpanret; transform:none; opacity:1; transition:none; display:flex; align-items:center; justify-content:center}
+.catalogue-detail-arrows .swiper-button-prev::after,
+.catalogue-detail-arrows .swiper-button-next::after {display:none}
+.catalogue-detail-arrows .swiper-button-prev {left:auto}
+.catalogue-detail-arrows .swiper-button-next {right:auto}
+.catalogue-detail-arrows .swiper-button-prev svg,
+.catalogue-detail-arrows .swiper-button-next svg {display:block; width:32px; height:32px; margin:0; fill:none; stroke:#B7C7D0; transition:stroke 0.3s ease-in}
+@media (min-width:1200px) {
+    .catalogue-detail-arrows .swiper-button-prev:hover svg,
+    .catalogue-detail-arrows .swiper-button-next:hover svg {stroke:#DF2C31}
+}
+.catalogue-detail-gallery .swiper-pagination.swiper-pagination-horizontal {display:block; position:absolute; margin:0; width:4px; left:auto; top:0; right:0; bottom:auto; z-index:2}
+.catalogue-detail-gallery .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; width:4px; height:4px; background:#DF2C31; opacity:1; margin:0 0 16px 0; border-radius:0; cursor:pointer; position:relative; transition:height 0.3s ease-in}
+.catalogue-detail-gallery .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {height:48px}
+.catalogue-detail-media-files {margin:64px 0 0 0}
+.catalogue-detail-media-files-inner {position:relative}
+@media (min-width:768px) {
+    .catalogue-detail-media-files.fixed .catalogue-detail-media-files-inner {position:fixed; top:100px}
+}
+.catalogue-detail-media-file {margin:16px 0 0 0; display:flex}
+.catalogue-detail-media-file:first-child {margin:0}
+.catalogue-detail-media-file a {display:flex; align-items:center; font-weight:bold; font-size:12px; line-height:17px; letter-spacing:0.025em; text-transform:uppercase; color:#05171D}
+@media (min-width:1200px) {
+    .catalogue-detail-media-file a:hover {color:#FF271A}
+}
+.catalogue-detail-media-file a svg {min-width:40px; max-width:40px; height:40px; fill:none; margin:0 16px 0 0}
+
+@media (max-width:1199px) {
+    .catalogue-detail-media {float:left; margin:56px 0 0 0; min-width:0; max-width:none}
+    .catalogue-detail-gallery {float:left; margin:0 0 0 -48px; width:574px}
+    .catalogue-detail-arrows {display:none}
+    .catalogue-detail-media-files {float:left; clear:left; margin:56px 0 0 0; min-height:0 !important; height:0}
+}
+
+@media (max-width:767px) {
+    .catalogue-detail-media {float:none; margin:56px -20px 0 -20px}
+    .catalogue-detail-gallery {float:none; margin:0; padding:0; width:auto}
+    .catalogue-detail-gallery .swiper-pagination.swiper-pagination-horizontal {position:relative; margin:32px 20px 0 20px; width:auto; top:auto; right:auto; bottom:auto; display:flex}
+    .catalogue-detail-gallery .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {margin:0 16px 0 0; transition:width 0.3s ease-in}
+    .catalogue-detail-gallery .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {height:4px; width:48px}
+    .catalogue-detail-media-files {float:none; margin:64px 20px 0 20px; height:auto}
+    .catalogue-detail-media-files-inner {margin:0 !important}
+}
+
+.catalogue-detail-container {min-width:49.23%; max-width:49.23%}
+.catalogue-detail-title {font:42px/55px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.catalogue-detail-number {margin:20px 0 0 0; font:22px/31px Gamestation, sans-serif; color:#85959E; text-transform:uppercase}
+.catalogue-detail-function-title {margin:56px 0 0 0; font:24px/34px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.catalogue-detail-function-text {margin:24px 0 0 0}
+.catalogue-detail-props {margin:80px 0 0 0}
+.catalogue-detail-props-menu {margin:0 -12px; font:14px/20px Gamestation, sans-serif; text-transform:uppercase}
+.catalogue-detail-props-menu ul {margin:0; padding:0; list-style:none; display:flex}
+.catalogue-detail-props-menu ul li {margin:0 12px; padding:0; flex:1}
+.catalogue-detail-props-menu ul li::before {display:none}
+.catalogue-detail-props-menu ul li a {display:block; text-align:center; padding:10px 0 8px 0; position:relative; color:#5D6D76; border-bottom:2px solid #E6EEF1; transition:border-color 0.3s ease-out}
+.catalogue-detail-props-menu ul li.active a {border-bottom-color:#DF2C31}
+@media (min-width:1200px) {
+    .catalogue-detail-props-menu ul li a:hover {border-bottom-color:#DF2C31}
+}
+.catalogue-detail-props-tabs {margin:56px 0 0 0; position:relative}
+.catalogue-detail-props-tab {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.3s ease-in}
+.catalogue-detail-props-tab.active {position:relative; left:auto; top:auto; opacity:1}
+.catalogue-detail-props-tab *:first-child {margin-top:0}
+.catalogue-detail-props-tab *:last-child {margin-bottom:0}
+
+@media (max-width:1199px) {
+    .catalogue-detail-container {min-width:0; max-width:none; float:right; width:calc(100% - 261px)}
+    .catalogue-detail-title {display:none}
+    .catalogue-detail-number {display:none}
+    .catalogue-detail-function-title {margin:0; font-size:18px; line-height:25px}
+    .catalogue-detail-function-text {margin:20px 0 0 0}
+    .catalogue-detail-props {margin:64px 0 0 0}
+    .catalogue-detail-props-menu {margin:0; width:324px}
+    .catalogue-detail-props-menu ul {margin:0 0 -24px -24px; flex-wrap:wrap}
+    .catalogue-detail-props-menu ul li {margin:0; min-width:50%; max-width:50%; padding:0 12px 24px 12px}
+    .catalogue-detail-props-menu ul li:last-child {min-width:100%; max-width:100%}
+    .catalogue-detail-props-tabs {margin:32px 0 0 0}
+}
+
+@media (max-width:767px) {
+    .catalogue-detail-container {margin:56px 0 0 0; float:none; width:auto}
+    .catalogue-detail-function-title {font-size:19px; line-height:27px}
+    .catalogue-detail-function-text {margin:24px 0 0 0}
+    .catalogue-detail-props {margin:56px 0 0 0}
+    .catalogue-detail-props-menu {width:auto}
+    .catalogue-detail-props-menu ul {margin:0; display:block}
+    .catalogue-detail-props-menu ul li {margin:8px 0 0 0; min-width:0; max-width:none; padding:0}
+    .catalogue-detail-props-menu ul li:first-child {margin:0}
+    .catalogue-detail-props-menu ul li:last-child {min-width:0; max-width:none}
+    .catalogue-detail-props-tabs {margin:40px 0 0 0}
+}
+
+.reviews {margin:120px -12px -32px -12px; display:flex; flex-wrap:wrap}
+.reviews-item {display:flex; min-width:33.33%; max-width:33.33%; padding:0 12px 32px 12px}
+.reviews-item-wrap {position:relative; display:flex; width:100%}
+.reviews-item-container {display:flex; width:100%; background:#F4F7F8; padding:3px; -webkit-clip-path:polygon(53px 0, 100% 0, 100% calc(100% - 92px), calc(100% - 53px) 100%, 0 100%, 0 92px); clip-path:polygon(53px 0, 100% 0, 100% calc(100% - 92px), calc(100% - 53px) 100%, 0 100%, 0 92px)}
+.reviews-item-content {background:#FFFFFF; display:flex; flex-direction:column; width:100%; padding:95px 29px 35px 29px; -webkit-clip-path:polygon(50px 0, 100% 0, 100% calc(100% - 89px), calc(100% - 50px) 100%, 0 100%, 0 89px); clip-path:polygon(50px 0, 100% 0, 100% calc(100% - 89px), calc(100% - 50px) 100%, 0 100%, 0 89px)}
+.reviews-item-company {font:24px/34px Gamestation, sans-serif; text-transform:uppercase; color:#05171D; transition:color 0.3s ease-in}
+@media (min-width:1200px) {
+    .reviews-item-container:hover .reviews-item-company {color:#DF2C31}
+}
+.reviews-item-author {margin:34px 0 0 0; font-weight:600; font-size:16px; line-height:22px; color:#35454E}
+.reviews-item-anonce {margin:8px 0 0 0; font-size:14px; line-height:20px; color:#5D6D76}
+.reviews-item-number {position:absolute; right:0; top:0; width:80px; height:80px; display:flex; align-items:center; justify-content:center; font:32px/42px Gamestation, sans-serif; color:#E6EEF1; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .reviews-item-container:hover .reviews-item-number {opacity:0}
+}
+.reviews-item-type {position:absolute; right:0; top:0; width:56px; height:56px; opacity:0; transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .reviews-item-container:hover .reviews-item-type {opacity:1}
+}
+.reviews-item-type svg {display:block; width:56px; height:56px; fill:none}
+
+@media (max-width:1199px) {
+    .reviews {margin:96px -12px -24px -12px}
+    .reviews-item {min-width:50%; max-width:50%; padding:0 12px 24px 12px}
+    .reviews-item-content {padding:69px 13px 11px 13px}
+    .reviews-item-company {font-size:17px; line-height:24px}
+    .reviews-item-author {margin:16px 0 0 0; font-size:15px; line-height:21px}
+    .reviews-item-anonce {font-size:13px; line-height:18px}
+    .reviews-item-number {display:none}
+    .reviews-item-type {width:48px; height:48px; opacity:1}
+    .reviews-item-type svg {width:48px; height:48px}
+}
+
+@media (max-width:767px) {
+    .reviews {margin:64px 0 0 0; display:block}
+    .reviews-item {min-width:0; max-width:none; padding:0; margin:20px 0 0 0; display:block}
+    .reviews-item:first-child {margin:0}
+    .reviews-item-wrap {display:block}
+    .reviews-item-container {padding:0; background:none; display:block; -webkit-clip-path:none; clip-path:none}
+    .reviews-item-content {background:none; display:block; width:auto; -webkit-clip-path:none; clip-path:none; padding:80px 0 20px 0; border-bottom:3px solid #E6EEF1}
+    .reviews-item-anonce {margin:12px 0 0 0}
+}
+
+.news {margin:120px -12px -32px -12px; display:flex; flex-wrap:wrap}
+.news-item {min-width:50%; max-width:50%; padding:0 12px 32px 12px}
+.news-item-container {display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:flex-end; border-top:3px solid #F4F7F8; color:#05171D; padding:24px 0 0 0; position:relative}
+@media (min-width:1200px) {
+    .news-item-container:hover {color:#DF2C31}
+}
+.news-item-date {display:flex; order:1; min-width:50%; max-width:50%; padding:0 0 0 12px; font-weight:600; font-size:16px; line-height:22px; color:#B7C7D0}
+.news-item-date span {margin:0 0 0 12px; padding:0 0 0 12px; border-left:2px solid #F4F7F8}
+.news-item-date span:first-child {margin:0; padding:0; border-left:none}
+.news-item-preview {order:0; min-width:50%; max-width:50%; padding:0 12px 0 0}
+.news-item-preview img {display:block; width:100%; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%); filter:gray; transition:all 0.3s ease-in}
+@media (min-width:1200px) {
+    .news-item-container:hover .news-item-preview img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+}
+.news-item-title {order:2; min-width:50%; max-width:50%; padding:0 0 0 12px; font:18px/25px Gamestation, sans-serif; text-transform:uppercase; margin:-13px 0 0 0; max-height:75px; position:relative; overflow:hidden; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; text-overflow:ellipsis}
+.news-item-icon {position:absolute; right:0; top:13px}
+.news-item-icon svg {display:block; width:40px; height:40px; fill:none; stroke:#DF2C31}
+
+@media (max-width:1199px) {
+    .news {margin:96px -12px -48px -12px}
+    .news-item {padding:0 12px 48px 12px}
+    .news-item-container {border-top:none; padding:15px 0 23px 0; display:block}
+    .news-item-date {display:block; min-width:0; max-width:none; padding:0; font-size:15px; line-height:21px; text-align:right}
+    .news-item-date span {margin:0 0 0 8px; padding:0 0 0 8px; border-left:1px solid #F4F7F8}
+    .news-item-preview {margin:23px 0 0 36px; min-width:0; max-width:none; padding:0}
+    .news-item-title {min-width:0; max-width:none; padding:0; margin:24px 36px 0 0; font-size:17px; line-height:24px; max-height:96px; -webkit-line-clamp:4}
+    .news-item-icon {display:none}
+}
+
+@media (max-width:767px) {
+    .news {margin:64px 0 0 0; display:block}
+    .news-item {min-width:0; max-width:none; padding:0; margin:8px 0 0 0}
+    .news-item-preview {margin:23px 0 0 32px}
+    .news-item-title {margin:24px 32px 0 0}
+}
+
+.main-welcome {margin:-80px 0 0 0; background:#05171D url(../images/main-welcome.jpg) no-repeat center bottom; background-size:cover}
+.main-welcome-container {position:relative; height:100vh; min-height:765px}
+
+@media (max-width:1199px) {
+    .main-welcome {margin:-72px 0 0 0}
+    .main-welcome-container {min-height:1024px}
+
+    @media (orientation:landscape) {
+        .main-welcome-container {min-height:432px}
+    }
+}
+
+@media (max-width:767px) {
+    .main-welcome-container {min-height:432px}
+}
+
+.main-welcome-text {position:absolute; left:0; top:50%; transform:translateY(-50%); width:50%; padding:0 12px 0 0}
+.main-welcome-text h1 {margin:0; padding:0; font:2.91vw/1.3em Gamestation, sans-serif; text-transform:uppercase; color:#FFFFFF}
+.main-welcome-notice {margin:48px 0 0 0; font:24px/34px Gamestation, sans-serif; text-transform:uppercase; color:#B7C7D0}
+
+@media (max-width:1199px) {
+    .main-welcome-text {top:120px; width:auto; right:0; transform:none; padding:0}
+    .main-welcome-text h1 {font-size:44px; line-height:57px}
+    .main-welcome-notice {margin:24px 0 0 0; font-size:18px; line-height:25px; color:#FFFFFF}
+
+    @media (orientation:landscape) {
+        .main-welcome-text {top:92px}
+        .main-welcome-text h1 {font-size:30px; line-height:42px}
+        .main-welcome-notice {margin:16px 0 0 0}
+    }
+}
+
+@media (max-width:767px) {
+    .main-welcome-text {top:92px}
+    .main-welcome-text h1 {font-size:22px; line-height:31px}
+    .main-welcome-notice {margin:16px 0 0 0; font-size:19px; line-height:27px}
+
+    @media (orientation:landscape) {
+        .main-welcome-text h1 {font-size:22px; line-height:31px}
+    }
+}
+
+.main-welcome-video {position:absolute; right:0; top:220px; width:528px}
+.main-welcome-video-link {display:block; position:relative}
+.main-welcome-video-link img {display:block; width:100%}
+.main-welcome-video-link span {position:absolute; left:-108px; bottom:-108px; width:108px; height:108px; background:#DF2C31; transition:background 0.3s ease-in}
+@media (min-width:1200px) {
+    .main-welcome-video-link:hover span {background:#FF271A}
+}
+.main-welcome-video-link span svg {display:block; width:108px; height:108px; fill:#FFFFFF}
+.main-welcome-video-all {padding:0 19px 0 24px; display:flex; height:108px; align-items:center; justify-content:space-between}
+.main-welcome-video-all-title {font:24px/34px Gamestation, sans-serif; text-transform:uppercase; color:#FFFFFF}
+.main-welcome-video-all-link a {display:flex; align-items:center; color:#FFFFFF; font-weight:bold; font-size:16px; line-height:22px; text-transform:uppercase; letter-spacing:0.015em}
+@media (min-width:1200px) {
+    .main-welcome-video-all-link a:hover {color:#DF2C31}
+}
+.main-welcome-video-all-link a svg {margin:0 0 0 8px; width:24px; height:24px; fill:none; stroke:#DF2C31}
+
+@media (max-width:1199px) {
+    .main-welcome-video {top:465px; width:498px}
+    .main-welcome-video-link span {left:0; bottom:-72px; width:72px; height:72px}
+    .main-welcome-video-link span svg {width:72px; height:72px}
+    .main-welcome-video-all {margin:0 0 0 72px; padding:0 0 0 24px; height:72px}
+    .main-welcome-video-all-title {font-size:18px; line-height:25px}
+
+    @media (orientation:landscape) {
+        .main-welcome-video {display:none}
+    }
+}
+
+@media (max-width:767px) {
+    .main-welcome-video {display:none}
+}
+
+.main-welcome-digits {position:absolute; right:0; bottom:0; padding:40px 56px 0 56px; height:174px; background:rgba(255, 255, 255, 0.1); backdrop-filter:blur(40px); -webkit-clip-path:polygon(29px 0, 100% 0, 100% 123px, calc(100% - 29px) 100%, 0 100%, 0 51px); clip-path:polygon(29px 0, 100% 0, 100% 123px, calc(100% - 29px) 100%, 0 100%, 0 51px)}
+.main-welcome-digits-slider .swiper-wrapper {display:flex}
+.main-welcome-digit,
+.main-welcome-digit.swiper-slide {width:auto; height:auto; margin:0 0 0 66px; white-space:nowrap}
+.main-welcome-digit:first-child,
+.main-welcome-digit.swiper-slide:first-child {margin:0}
+.main-welcome-digit-value {font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#FFFFFF}
+.main-welcome-digit-value sup {vertical-align:top; font-size:20px; line-height:20px; top:7px; position:relative}
+.main-welcome-digit-text {margin:8px 0 0 0; font-size:16px; line-height:22px; color:#B7C7D0}
+.main-welcome-digits-next {display:none}
+.main-welcome-digits-prev {display:none}
+
+@media (max-width:1199px) {
+    .main-welcome-digits {right:-48px; padding:0; height:auto; background:none; backdrop-filter:none; -webkit-clip-path:none; clip-path:none}
+    .main-welcome-digits-slider {width:459px; height:174px; background:rgba(255, 255, 255, 0.1); backdrop-filter:blur(40px); -webkit-clip-path:polygon(29px 0, 100% 0, 100% 100%, 0 100%, 0 51px); clip-path:polygon(29px 0, 100% 0, 100% 100%, 0 100%, 0 51px)}
+    .main-welcome-digit,
+    .main-welcome-digit.swiper-slide {width:100%; height:100%; margin:0; display:flex; align-items:flex-start; padding:0 0 0 48px; flex-direction:column; justify-content:center; text-align:left}
+    .main-welcome-digit-value {font-size:24px; line-height:34px}
+    .main-welcome-digit-value sup {font-size:16px; line-height:16px}
+    .main-welcome-digit-text {font-size:15px; line-height:21px}
+    .main-welcome-digits-next {display:flex; position:absolute; right:0; top:0; width:72px; height:87px; background:#FFFFFF; align-items:center; justify-content:center; z-index:2}
+    .main-welcome-digits-next svg {width:32px; height:32px; fill:none; stroke:#DF2C31}
+    .main-welcome-digits-prev {display:flex; position:absolute; right:0; top:87px; width:72px; height:87px; background:#DF2C31; align-items:center; justify-content:center; z-index:2}
+    .main-welcome-digits-prev svg {width:32px; height:32px; fill:none; stroke:#FFFFFF; transform:scale(-1, 1)}
+
+    @media (orientation:landscape) {
+        .main-welcome-digits-slider {width:360px; height:144px}
+        .main-welcome-digit,
+        .main-welcome-digit.swiper-slide {padding:0 0 0 20px}
+        .main-welcome-digit-value {font-size:22px; line-height:31px}
+        .main-welcome-digits-next {height:72px}
+        .main-welcome-digits-prev {top:72px; height:72px}
+    }
+}
+
+@media (max-width:767px) {
+    .main-welcome-digits {right:-20px}
+    .main-welcome-digits-slider {width:360px; height:144px; -webkit-clip-path:none; clip-path:none}
+    .main-welcome-digit,
+    .main-welcome-digit.swiper-slide {padding:0 0 0 20px}
+    .main-welcome-digit-value {font-size:22px; line-height:31px}
+    .main-welcome-digits-next {height:72px}
+    .main-welcome-digits-prev {top:72px; height:72px}
+}
+
+.main-prefs,
+.main-prefs.swiper {margin:120px -12px 0 -12px; overflow:visible}
+.main-prefs .swiper-wrapper {display:flex}
+.main-prefs-item,
+.main-prefs-item.swiper-slide {padding:0 12px; display:flex; height:auto; min-width:33.33%; max-width:33.33%}
+.main-prefs-item-wrap {position:relative; display:flex; width:100%; background:#F4F7F8; padding:3px; -webkit-clip-path:polygon(53px 0, 100% 0, 100% calc(100% - 92px), calc(100% - 53px) 100%, 0 100%, 0 92px); clip-path:polygon(53px 0, 100% 0, 100% calc(100% - 92px), calc(100% - 53px) 100%, 0 100%, 0 92px)}
+.main-prefs-item-container {background:#FFFFFF; display:flex; flex-direction:column; width:100%; padding:89px 53px 56px 29px; -webkit-clip-path:polygon(50px 0, 100% 0, 100% calc(100% - 89px), calc(100% - 50px) 100%, 0 100%, 0 89px); clip-path:polygon(50px 0, 100% 0, 100% calc(100% - 89px), calc(100% - 50px) 100%, 0 100%, 0 89px)}
+.main-prefs-item-number {position:absolute; right:0; top:0; width:80px; height:80px; display:flex; align-items:center; justify-content:center; font:32px/42px Gamestation, sans-serif; color:#E6EEF1}
+.main-prefs-item-title {font:30px/42px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.main-prefs-item-text {margin:16px 0 0 0; font-weight:600; font-size:16px; line-height:22px; color:#5D6D76}
+
+@media (max-width:1199px) {
+    .main-prefs,
+    .main-prefs.swiper {margin:56px -12px 0 -12px; overflow:hidden}
+    .main-prefs-item,
+    .main-prefs-item.swiper-slide {min-width:50%; max-width:50%}
+    .main-prefs-item-wrap {-webkit-clip-path:polygon(29px 0, 100% 0, 100% calc(100% - 53px), calc(100% - 29px) 100%, 0 100%, 0 51px); clip-path:polygon(29px 0, 100% 0, 100% calc(100% - 53px), calc(100% - 29px) 100%, 0 100%, 0 51px)}
+    .main-prefs-item-container {padding:85px 17px 23px 17px; -webkit-clip-path:polygon(26px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 26px) 100%, 0 100%, 0 48px); clip-path:polygon(26px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 26px) 100%, 0 100%, 0 48px)}
+    .main-prefs-item-number {width:64px; height:64px; font-size:24px; line-height:34px}
+    .main-prefs-item-title {font-size:18px; line-height:25px}
+    .main-prefs-item-text {font-size:15px; line-height:21px}
+}
+
+.main-catalogue {margin:120px 0 0 0}
+.main-catalogue-header {display:flex; position:relative}
+.main-catalogue-title {min-width:50%; max-width:50%; font:42px/55px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.main-catalogue-title span {vertical-align:top; font-size:22px; line-height:31px; color:#B7C7D0; margin:0 0 0 6px}
+.main-catalogue-text {min-width:50%; max-width:50%; padding:0 200px 0 12px; font:30px/42px Gamestation, sans-serif; color:#DF2C31; text-transform:uppercase}
+.main-catalogue-arrows {position:absolute; right:0; bottom:0; display:flex}
+.main-catalogue-arrows-sep {min-width:2px; max-width:2px; height:48px; background:#F4F7F8}
+.main-catalogue-arrows .swiper-button-prev,
+.main-catalogue-arrows .swiper-button-next {position:relative; z-index:2; top:auto; width:56px; height:48px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transpanret; transform:none; opacity:1; transition:none; display:flex; align-items:center; justify-content:center}
+.main-catalogue-arrows .swiper-button-prev::after,
+.main-catalogue-arrows .swiper-button-next::after {display:none}
+.main-catalogue-arrows .swiper-button-prev {left:auto}
+.main-catalogue-arrows .swiper-button-next {right:auto}
+.main-catalogue-arrows .swiper-button-prev svg,
+.main-catalogue-arrows .swiper-button-next svg {display:block; width:32px; height:32px; margin:0; fill:none; stroke:#B7C7D0; transition:stroke 0.3s ease-in}
+@media (min-width:1200px) {
+    .main-catalogue-arrows .swiper-button-prev:hover svg,
+    .main-catalogue-arrows .swiper-button-next:hover svg {stroke:#DF2C31}
+}
+.main-catalogue .catalogue,
+.main-catalogue .catalogue.swiper {flex-wrap:nowrap; margin:120px -12px 0 -12px; overflow:visible}
+.main-catalogue .catalogue .swiper-wrapper {display:flex}
+.main-catalogue .catalogue-item,
+.main-catalogue .catalogue-item.swiper-slide {padding:0 12px; display:flex; height:auto}
+
+@media (max-width:1199px) {
+    .main-catalogue {margin:96px 0 0 0}
+    .main-catalogue-header {display:block}
+    .main-catalogue-title {min-width:0; max-width:none; font-size:36px; line-height:47px}
+    .main-catalogue-title span {font-size:17px; line-height:24px; margin:0 0 0 8px}
+    .main-catalogue-text {margin:24px 122px 0 0; min-width:0; max-width:none; padding:0; font-size:24px; line-height:34px}
+    .main-catalogue-arrows-sep {height:40px}
+    .main-catalogue-arrows .swiper-button-prev,
+    .main-catalogue-arrows .swiper-button-next {width:48px; height:40px}
+    .main-catalogue-arrows .swiper-button-prev svg,
+    .main-catalogue-arrows .swiper-button-next svg {width:24p; height:24px}
+    .main-catalogue .catalogue,
+    .main-catalogue .catalogue.swiper {margin:80px -12px 0 -12px}
+    .main-catalogue .catalogue-item {min-width:50%; max-width:50%}
+    .main-catalogue .catalogue-item-parent {-webkit-clip-path:polygon(29px 0, 100% 0, 100% calc(100% - 53px), calc(100% - 29px) 100%, 0 100%, 0 51px); clip-path:polygon(29px 0, 100% 0, 100% calc(100% - 53px), calc(100% - 29px) 100%, 0 100%, 0 51px)}
+    .main-catalogue .catalogue-item-parent-container {padding:97px 17px 49px 17px; -webkit-clip-path:polygon(26px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 26px) 100%, 0 100%, 0 48px); clip-path:polygon(26px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 26px) 100%, 0 100%, 0 48px)}
+    .main-catalogue .catalogue-item-parent-preview {margin:0 -17px 0 0; min-height:152px}
+    .main-catalogue .catalogue-item-parent-title {margin:24px 0 0 0; font-size:17px; line-height:24px}
+    .main-catalogue .catalogue-item-parent-number {width:64px; height:64px; font-size:24px; line-height:34px}
+}
+
+.main-geo {margin:176px -999px 192px -999px; display:flex; align-items:center; padding:96px 999px; background:#05171D url(../images/main-geo.png) no-repeat center top}
+.main-geo-container {min-width:50%; max-width:50%; padding:0 12px 0 0}
+.main-geo-content {max-width:499px}
+.main-geo-title {font:48px/62px Gamestation, sans-serif; color:#E6EEF1; text-transform:uppercase}
+.main-geo-text {margin:96px 0 0 0; font-weight:600; font-size:19px; line-height:27px; color:#85959E}
+.main-geo-text p {margin:10px 0 0 0; padding:0}
+.main-geo-btn {margin:64px 0 0 0; max-width:320px}
+.main-geo-btn .btn-border {width:100%}
+.main-geo-info {min-width:50%; max-width:50%; padding:0 0 0 12px}
+.main-geo-info-content.swiper {border-left:3px solid #35454E; padding:16px 0 16px 37px; max-width:504px; margin:0}
+.main-geo-info-content .swiper-wrapper {display:block}
+.main-geo-info-item.swiper-slide {width:auto; height:auto; margin:40px 0 0 0}
+.main-geo-info-item.swiper-slide:first-child {margin:0}
+.main-geo-info-item-title {color:#DF2C31; font:32px/42px Gamestation, sans-serif}
+.main-geo-info-item-title span {font-size:56px; line-height:73px}
+.main-geo-info-item-text {margin:8px 0 0 0; font-weight:600; font-size:16px; line-height:22px; color:#B7C7D0}
+.main-geo-info-next,
+.main-geo-info-arrows-sep,
+.main-geo-info-prev {display:none}
+
+@media (max-width:1199px) {
+    .main-geo {margin:96px -48px; display:block; padding:40px 48px 94px 48px; background:#05171D url(../images/main-geo-tablet.png) no-repeat right 319px; position:relative}
+    .main-geo-content {max-width:none}
+    .main-geo-title {font-size:36px; line-height:47px; max-width:324px}
+    .main-geo-text {margin:74px 0 0 0; font-size:17px; line-height:24px}
+    .main-geo-text p {margin:9px 0 0 0}
+    .main-geo-btn {margin:56px 0 0 0}
+    .main-geo-info {position:absolute; right:72px; top:206px; min-width:300px; max-width:300px; padding:0}
+    .main-geo-info-content.swiper {border-left:none; padding:0; max-width:none}
+    .main-geo-info-content .swiper-wrapper {display:flex}
+    .main-geo-info-item.swiper-slide {margin:0; width:100%; height:144px; display:flex; flex-direction:column; justify-content:center; padding:0 16px 0 32px}
+    .main-geo-info-item-title {font-size:30px; line-height:39px; text-transform:uppercase}
+    .main-geo-info-item-title span {font-size:30px; line-height:39px}
+    .main-geo-info-item-text {margin:12px 0 0 0; font-size:15px; line-height:21px}
+    .main-geo-info-next {display:flex; position:absolute; right:-72px; top:0; width:72px; height:71px; align-items:center; justify-content:center; z-index:2}
+    .main-geo-info-next svg {width:32px; height:32px; fill:none; stroke:#CB181D}
+    .main-geo-info-arrows-sep {display:block; position:absolute; right:-72px; top:71px; height:2px; width:72px; background:#35454E; z-index:2}
+    .main-geo-info-prev {display:flex; position:absolute; right:-72px; top:73px; width:72px; height:71px; align-items:center; justify-content:center; z-index:2}
+    .main-geo-info-prev svg {width:32px; height:32px; fill:none; stroke:#CB181D; transform:scale(-1, 1)}
+}
+
+.main-types {margin:120px 0 0 0; position:relative; padding:72px 0 58px 0}
+.main-types::before {content:""; position:absolute; left:50%; top:0; margin:0 0 0 252px; width:1040px; height:900px; background:url(../images/main-types.svg) no-repeat; pointer-events:none}
+.main-types-header {display:flex; position:relative}
+.main-types-header-text {min-width:504px; max-width:504px}
+.main-types-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+.main-types-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px; color:#B7C7D0}
+.main-types-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-types-arrows {display:none}
+.main-types-header-slider {width:100%; position:relative; overflow:hidden}
+.main-types-header-slider-inner .swiper-wrapper {display:flex}
+.main-types-header-slider-item {min-width:50%; max-width:50%}
+.main-types-header-slider-item a {display:block; margin:0 0 0 24px}
+.main-types-header-slider-item-img {padding:66.66% 0 0 0; position:relative; background:no-repeat center; background-size:cover; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%); filter:gray; transition:all 0.3s ease-in}
+@media (min-width:1200px) {
+    .main-types-header-slider-item a:hover .main-types-header-slider-item-img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+}
+.main-types-header-slider-item-img::after {content:""; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.05); transition:opacity 0.3s ease-in}
+@media (min-width:1200px) {
+    .main-types-header-slider-item a:hover .main-types-header-slider-item-img::after {opacity:0}
+}
+.main-types-header-slider-item-number {position:absolute; right:0; top:0; display:flex; align-items:center; justify-content:center; width:80px; height:80px; font:32px/42px Gamestation, sans-serif; text-transform:uppercase; color:#E6EEF1}
+.main-types-bottom {margin:120px 0 0 0; display:flex; justify-content:space-between}
+.main-types-bottom-item {min-width:calc(50% - 12px); max-width:calc(50% - 12px); padding:0 8.46% 0 0}
+.main-types-bottom-item-title {font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+.main-types-bottom-item-text {margin:48px 0 0 0; font-weight:600; font-size:19px; line-height:27px}
+.main-types-bottom-item-link {display:flex; margin:24px 0 0 0}
+.main-types-bottom-item-link a {display:flex; align-items:center; height:48px; font-weight:bold; font-size:16px; line-height:22px; text-transform:uppercase; letter-spacing:0.015em}
+.main-types-bottom-item-link a svg {margin:0 0 0 8px; width:24px; height:24px; fill:none; stroke:#DF2C31; transition:stroke 0.3s ease-in}
+@media (min-width:1200px) {
+    .main-types-bottom-item-link a:hover svg {stroke:#FF271A}
+}
+
+@media (max-width:1199px) {
+    .main-types {margin:96px 0 0 0; padding:0}
+    .main-types::before {display:none}
+    .main-types-header {display:block}
+    .main-types-header-text {min-width:0; max-width:none; margin:0 122px 0 0; position:relative}
+    .main-types-title {font-size:36px; line-height:47px}
+    .main-types-title br {display:none}
+    .main-types-title strong {font-size:17px; line-height:24px}
+    .main-types-subtitle {margin:24px 0 0 0; font-size:24px; line-height:34px}
+    .main-types-arrows {position:absolute; right:-122px; bottom:0; display:flex}
+    .main-types-arrows-sep {min-width:2px; max-width:2px; height:40px; background:#F4F7F8}
+    .main-types-arrows .swiper-button-prev,
+    .main-types-arrows .swiper-button-next {position:relative; z-index:2; top:auto; width:48px; height:40px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transpanret; transform:none; opacity:1; transition:none; display:flex; align-items:center; justify-content:center}
+    .main-types-arrows .swiper-button-prev::after,
+    .main-types-arrows .swiper-button-next::after {display:none}
+    .main-types-arrows .swiper-button-prev {left:auto}
+    .main-types-arrows .swiper-button-next {right:auto}
+    .main-types-arrows .swiper-button-prev svg,
+    .main-types-arrows .swiper-button-next svg {display:block; width:24px; height:24px; margin:0; fill:none; stroke:#B7C7D0; transition:stroke 0.3s ease-in}
+    .main-types-header-slider {width:auto; margin:80px 0 0 -24px}
+    .main-types-header-slider-item-number {width:64px; height:64px; font-size:24px; line-height:34px}
+    .main-types-bottom {margin:80px 0 0 0}
+    .main-types-bottom-item {padding:0}
+    .main-types-bottom-item-title {font-size:24px; line-height:34px}
+    .main-types-bottom-item-text {margin:32px 0 0 0; font-size:17px; line-height:24px}
+}
+
+.main-news {margin:120px 0 0 0; display:flex; justify-content:space-between; align-items:flex-start}
+.main-news-header {min-width:504px; max-width:504px}
+.main-news-header-inner {position:relative; width:504px}
+@media (min-width:1200px) {
+    .main-news-header.fixed .main-news-header-inner {position:fixed; top:100px}
+}
+.main-news-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+.main-news-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px; color:#B7C7D0}
+.main-news-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-news-container,
+.main-news-container.swiper {margin:0 0 0 10%; width:100%}
+.main-news-container .news,
+.main-news-container .news.swiper-wrapper {margin:0; display:block}
+.main-news-container .news-item,
+.main-news-container .news-item.swiper-slide {min-width:0; max-width:none; padding:0; margin:24px 0 0 0}
+.main-news-container .news-item:first-child,
+.main-news-container .news-item.swiper-slide:first-child {margin:0}
+.main-news-container .news-item-title {margin:-40px 0 0 0}
+.main-news-container .news-item-date {min-width:57.34%; max-width:57.34%}
+.main-news-container .news-item-preview {min-width:42.66%; max-width:42.66%}
+.main-news-container .news-item-title {min-width:57.34%; max-width:57.34%; font-size:24px; line-height:34px; max-height:102px}
+.main-news-container .news-item-icon {top:24px}
+
+@media (max-width:1199px) {
+    .main-news {margin:96px 0 0 0; display:block}
+    .main-news-header {min-width:0; max-width:none}
+    .main-news-header-inner {width:auto; margin-top:0 !important; margin-right:122px; position:relative}
+    .main-news-title {font-size:36px; line-height:47px}
+    .main-news-title strong {font-size:17px; line-height:24px}
+    .main-news-subtitle {margin:24px 0 0 0; font-size:24px; line-height:34px}
+    .main-news-container .news,
+    .main-news-container .news.swiper-wrapper {margin:0; display:flex}
+}
+
+.main-reviews {margin:120px 0 0 0; display:flex; position:relative; padding:72px 0}
+.main-reviews-header {min-width:504px; max-width:504px}
+.main-reviews-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+.main-reviews-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px}
+.main-reviews-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-reviews-slider {width:100%; position:relative; overflow:hidden}
+.main-reviews-slider-inner .swiper-wrapper {display:flex}
+.main-reviews-slider-item {min-width:50%; max-width:50%}
+.main-reviews-slider-item .reviews-item-wrap {width:auto; margin:0 0 0 24px}
+
+.main-partners {margin:120px 0 0 0; display:flex; position:relative}
+.main-partners-header {min-width:504px; max-width:504px; background:#FFFFFF; position:relative; z-index:2}
+.main-partners-header::before {content:""; position:absolute; right:100%; top:0; bottom:0; background:#FFFFFF; width:999px}
+.main-partners-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
+.main-partners-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px}
+.main-partners-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-partners-slider {width:calc(100% - 504px); position:relative}
+.main-partners-slider-inner.swiper {width:100%; overflow:visible}
+.main-partners-slider-inner .swiper-wrapper {display:flex}
+.main-partners-slider-item {min-width:244px; max-width:244px}
+.main-partners-slider-item-inner {margin:0 0 0 24px}
+.main-partners-slider-item-inner a {display:block}
+.main-partners-slider-item-inner img {display:block; width:100%; border-radius:8px; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%); filter:gray; transition:all 0.3s ease-in}
+@media (min-width:1200px) {
+    .main-partners-slider-item-inner:hover img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+}
+
+.feedback {margin:120px 0 0 0; padding:50px 0; display:flex; align-items:center}
+.feedback-form {min-width:504px; max-width:504px}
+.feedback-form form {margin:0; padding:0}
+.feedback-form-title {font:42px/55px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.feedback-form-anonce {margin:24px 0 48px 0; font-weight:600; font-size:19px; line-height:27px; color:#5D6D76}
+.feedback-img {margin:0 0 0 10%; width:100%; position:relative; overflow:hidden}
+.feedback-img img {display:block; max-width:none; height:600px}
+.feedback-img-mobile {display:none}
+
+@media (max-width:1199px) {
+    .feedback {margin:96px 0 0 0; padding:0; display:block; position:relative}
+    .feedback-form {min-width:0; max-width:none}
+    .feedback-form-title {font-size:30px; line-height:39px}
+    .feedback-form-anonce {margin:24px 0 80px 0; font-size:17px; line-height:24px}
+    .feedback-form .form-input {width:calc(50% - 12px)}
+    .feedback-form .form-submit {width:calc(50% - 12px)}
+    .feedback-form .form-policy {width:calc(50% - 12px)}
+    .feedback-img {margin:0; width:calc(50% - 12px); position:absolute; right:0; bottom:52px}
+    .feedback-img img {height:296px}
+}
+
+@media (max-width:767px) {
+    .feedback {margin:64px 0 0 0; padding:24px 0}
+    .feedback-form-anonce {margin:20px 0 32px 0}
+    .feedback-form .form-input {width:auto}
+    .feedback-form .form-submit {width:auto}
+    .feedback-form .form-policy {width:auto}
+    .feedback-img {display:none}
+    .feedback-img-mobile {display:block; margin:32px 0 0 0; width:auto; position:relative; right:auto; bottom:auto; height:120px; -webkit-clip-path:polygon(21px 0, 100% 0, 100% calc(100% - 36px), calc(100% - 21px) 100%, 0 100%, 0 36px); clip-path:polygon(21px 0, 100% 0, 100% calc(100% - 36px), calc(100% - 21px) 100%, 0 100%, 0 36px)}
+    .feedback-img-mobile img {display:block; width:100%}
+}
+
+footer {margin:120px 0 0 0; padding:80px 0 21px 0; background:#05171D url(../images/footer-bg.svg) no-repeat left top}
+
+@media (max-width:1199px) {
+    footer {margin:96px 0 0 0; padding:48px 0 19px 0; background-image:url(../images/footer-bg-tablet.svg)}
+}
+
+@media (max-width:767px) {
+    footer {margin:64px 0 0 0; padding:40px 0 16px 0; background-image:none}
+}
+
+.footer-top {display:flex; justify-content:space-between}
+.footer-logo {min-width:266px}
+.footer-logo svg {display:block; width:266px; height:40px; fill:none}
+.footer-container {min-width:57.69%; max-width:57.69%; display:flex; justify-content:space-between}
+.footer-main-menu {font:24px/34px Gamestation, sans-serif; text-transform:uppercase}
+.footer-main-menu ul {margin:0; padding:0; list-style:none}
+.footer-main-menu ul li {margin:32px 0 0 0; padding:0}
+.footer-main-menu ul li:first-child {margin:0}
+.footer-main-menu ul li::before {display:none}
+.footer-main-menu ul li a {color:#FFFFFF}
+@media (min-width:1200px) {
+    .footer-main-menu ul li a:hover {color:#DF2C31}
+}
+.footer-main-menu ul li.active a {color:#DF2C31}
+.footer-main-btns {margin:96px 0 0 0; max-width:320px}
+.footer-main-btn {margin:16px 0 0 0}
+.footer-main-btn a {display:flex}
+.footer-add {min-width:372px; max-width:372px}
+.footer-add-menu {border-left:2px solid #5D6D76; padding:16px 0 16px 38px; font:22px/31px Gamestation, sans-serif; text-transform:uppercase}
+.footer-add-menu ul {margin:0; padding:0; list-style:none}
+.footer-add-menu ul li {margin:20px 0 0 0; padding:0}
+.footer-add-menu ul li:first-child {margin:0}
+.footer-add-menu ul li::before {display:none}
+.footer-add-menu ul li a {color:#B7C7D0}
+@media (min-width:1200px) {
+    .footer-add-menu ul li a:hover {color:#DF2C31}
+}
+.footer-add-menu ul li.active a {color:#DF2C31}
+.footer-add-contacts {margin:56px 0 0 32px}
+.footer-add-phone {margin:8px 0 0 0; font:16px/22px Gamestation, sans-serif; text-transform:uppercase; color:#FFFFFF}
+.footer-add-phone span {font-size:24px; line-height:34px; margin:0 0 0 8px}
+.footer-add-phone a {color:#FFFFFF}
+.footer-add-email {margin:20px 0 0 8px; font:16px/22px Gamestation, sans-serif; text-transform:uppercase; color:#FFFFFF}
+.footer-add-email a {color:#FFFFFF}
+@media (min-width:1200px) {
+    .footer-add-email a:hover {color:#DF2C31}
+}
+.footer-add-social {margin:24px 0 0 0; display:flex}
+.footer-add-social a {min-width:40px; max-width:40px; fill:#FFFFFF; margin:0 0 0 24px}
+.footer-add-social a:first-child {margin:0}
+.footer-add-social svg {display:block; width:40px; height:40px; fill:#FFFFFF; transition:fill 0.3s ease-in}
+@media (min-width:1200px) {
+    .footer-add-social a:hover svg {fill:#DF2C31}
+}
+
+@media (max-width:1199px) {
+    .footer-top {display:block}
+    .footer-logo {min-width:0}
+    .footer-container {min-width:0; max-width:none; margin:80px 0 0 0}
+    .footer-main {min-width:320px; max-width:320px}
+    .footer-main-menu {font-size:22px; line-height:31px}
+    .footer-main-menu ul li {margin:24px 0 0 0}
+    .footer-add {min-width:237px; max-width:237px}
+    .footer-add-menu {padding:12px 0 12px 22px; font-size:18px; line-height:25px}
+    .footer-add-menu ul li {margin:16px 0 0 0}
+    .footer-add-contacts {margin:64px 0 0 24px}
+    .footer-add-phone {font-size:18px; line-height:25px}
+    .footer-add-phone span {font-size:18px; line-height:25px}
+    .footer-add-email {margin:20px 0 0 12px}
+    .footer-add-social {margin:24px 0 0 8px}
+    .footer-add-social a {margin:0 0 0 16px}
+}
+
+@media (max-width:767px) {
+    .footer-logo {display:none}
+    .footer-container {display:block; margin:0}
+    .footer-main {min-width:none; max-width:none; margin:0 0 0 12px}
+    .footer-main-menu {font-size:22px; line-height:31px}
+    .footer-main-btns {display:none}
+    .footer-add {min-width:0; max-width:none; margin:40px 0 0 0; padding:0 0 22px 0; border-bottom:3px solid #5D6D76}
+    .footer-add-menu {border-left:none; border-top:3px solid #5D6D76; border-bottom:3px solid #5D6D76; padding:22px 24px; font-size:19px; line-height:27px}
+    .footer-add-contacts {margin:32px 0 0 24px}
+    .footer-add-social {margin:24px 0 0 0}
+}
+
+.footer-bottom {margin:92px 0 0 0; display:flex; justify-content:space-between; font-size:16px; line-height:22px; position:relative}
+.footer-bottom-copyrights {color:#5D6D76}
+.footer-bottom-container {min-width:57.69%; max-width:57.69%; display:flex; justify-content:space-between}
+.footer-bottom-policy {color:#5D6D76}
+.footer-bottom-policy a {color:#5D6D76}
+@media (min-width:1200px) {
+    .footer-bottom-policy a:hover {color:#DF2C31}
+}
+.footer-bottom-developer {min-width:372px; max-width:372px; padding:0 0 0 41px}
+
+@media (max-width:1199px) {
+    .footer-bottom {margin:75px 0 0 0; display:block; font-size:15px; line-height:21px}
+    .footer-bottom-container {min-width:0; max-width:none; margin:12px 0 0 0; flex-wrap:wrap}
+    .footer-bottom-policy {order:1; margin:12px 0 0 0; width:100%}
+    .footer-bottom-developer {min-width:0; max-width:none; padding:0}
+}
+
+@media (max-width:767px) {
+    .footer-bottom {margin:40px 0 0 0; padding:0 40px 0 24px 0}
+}
+
+.top-link {position:absolute; right:-48px; bottom:-1px}
+.top-link svg {display:block; width:24px; height:24px; fill:none; stroke:#DF2C31; transition:stroke 0.3s ease-in}
+@media (min-width:1200px) {
+    .top-link:hover svg {stroke:#FF271A}
+}
+
+@media (max-width:1199px) {
+    .top-link {right:0; bottom:auto; top:0}
+}
+
+.window-open,
+.window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:9999; background:#05171D url(../images/window-bg.svg) no-repeat right 161px; text-align:center}
+.window::after {content:""; display:inline-block; width:0; height:100%; vertical-align:middle}
+.window-loading {position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/loading.svg) no-repeat center}
+.window-container {display:inline-block; vertical-align:middle; position:relative; text-align:left; background:#FFFFFF; margin:20px 0}
+.window-close {position:absolute; right:40px; top:40px; width:40px; height:40px}
+.window-close svg {display:block; width:40px; height:40px; fill:none; stroke:#DF2C31; transition:stroke 0.3s ease-in}
+@media (min-width:1200px) {
+    .window-close:hover svg {stroke:#FF271A}
+}
+
+@media (max-width:1199px) {
+    .window {background:rgba(0, 13, 17, 0.9) url(../images/window-bg-tablet.svg) no-repeat left top}
+}
+
+@media (max-width:767px) {
+    .window {background-image:none}
+    .window-close {right:20px; top:20px}
+}
+
+.window-title {font:32px/42px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+
+@media (max-width:767px) {
+    .window-title {font-size:28px; line-height:39px}
+}
+
+.window-success {width:504px; padding:88px 40px 40px 40px}
+.window-success-text {margin:24px 0 0 0; color:#5D6D76}
+
+@media (max-width:1199px) {
+    .window-success {width:498px; padding:96px 40px 40px 40px}
+    .window-success-text {margin:20px 0 0 0}
+}
+
+@media (max-width:767px) {
+    .window-success {width:360px; padding:76px 20px 20px 20px}
+    .window-success-text {margin:16px 0 0 0}
+}
+
+.window-callback {width:504px; padding:88px 40px 40px 40px}
+.window-callback-text {margin:16px 0 0 0; color:#5D6D76}
+.window-callback-form {margin:40px 0 0 0}
+.window-callback-form form {margin:0; padding:0}
+.window-callback-form .form-submit {margin:40px 0 0 0}
+
+@media (max-width:1199px) {
+    .window-callback {width:498px; padding:96px 40px 40px 40px}
+    .window-callback-form {margin:32px 0 0 0}
+}
+
+@media (max-width:767px) {
+    .window-callback {width:360px; padding:76px 20px 20px 20px}
+}
+
+.window-support {width:1032px; padding:88px 40px 40px 40px}
+.window-support-text {margin:16px 0 0 0; color:#5D6D76}
+.window-support-form {margin:40px 0 0 0}
+.window-support-form form {display:flex; margin:0; padding:0}
+.window-support-form-type {width:100%; margin:0 16px 0 0}
+.window-support-form-type-select {display:flex; margin:0 0 -12px -24px; flex-wrap:wrap}
+.window-support-form-type-select label {margin:0 0 12px 24px; cursor:pointer}
+.window-support-form-type-select label input {display:none}
+.window-support-form-type-select label span {display:block; padding:10px 0 8px 0; border-bottom:2px solid #E6EEF1; transition:border-color 0.3s ease-in; font-weight:bold; font-size:14px; line-height:20px; letter-spacing:0.02em; text-transform:uppercase; color:#05171D}
+.window-support-form-type-select label input:checked+span {border-bottom-color:#DF2C31}
+.window-support-form-type-title {margin:40px 0; font:22px/31px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.window-support-form-contacts {min-width:432px; max-width:432px}
+.window-support-form-contacts-title {margin:0 0 32px 0; font:22px/31px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.window-support-form .form-submit {margin:40px 0 0 0}
+
+@media (max-width:1199px) {
+    .window-support {width:672px; padding:96px 40px 40px 40px}
+    .window-support-form {margin:32px 0 0 0}
+    .window-support-form form {display:block}
+    .window-support-form-type {width:auto; margin:0 0 32px 0}
+    .window-support-form-type-title {margin:32px 0 24px 0}
+    .window-support-form-contacts {min-width:0; max-width:none}
+    .window-support-form-contacts-title {margin:0 0 24px 0}
+    .window-support-form .form-submit {margin:32px 0 0 0; max-width:432px}
+    .window-support-form .form-policy {max-width:432px}
+}
+
+@media (max-width:767px) {
+    .window-support {width:360px; padding:76px 20px 20px 20px}
+    .window-support-form-type-select {display:block; margin:0}
+    .window-support-form-type-select label {margin:24px 0 0 0; display:block}
+    .window-support-form-type-select label:first-child {margin:0}
+    .window-support-form-type-select label span {text-align:center}
+    .window-support-form-type-title {font-size:17px; line-height:22px}
+    .window-support-form-contacts-title {margin:0 0 32px 0; font-size:17px; line-height:22px}
+}

@@ -1,0 +1,25 @@
+<div class="window-support">
+    <div class="window-title">Заявка в&nbsp;Техподдержку</div>
+    <div class="window-support-text">Заполните форму и наши специалисты свяжутся с вами в ближайшее время</div>
+    <div class="window-support-form">
+        <form action="windows/success.html" method="post" class="window-form">
+            <div class="window-support-form-type">
+                <div class="window-support-form-type-select">
+                    <label><input type="radio" name="type" value="crash"><span>Поломка прибора</span></label>
+                    <label><input type="radio" name="type" value="questions" checked><span>Вопросы по&nbsp;эксплуатации</span></label>
+                    <label><input type="radio" name="type" value="order"><span>Заказ услуг</span></label>
+                </div>
+                <div class="window-support-form-type-title">Описание проблемы</div>
+                <div class="form-input"><span class="form-input-label">Название продукции</span><textarea name="message" rows="1" cols="1"></textarea></div>
+            </div>
+            <div class="window-support-form-contacts">
+                <div class="window-support-form-contacts-title">Контактные данные</div>
+                <div class="form-input"><span class="form-input-label">Ваше имя*</span><input type="text" name="name" value="" class="required"></div>
+                <div class="form-input"><span class="form-input-label">Ваш телефон*</span><input type="text" name="phone" value="" class="required phoneRU"></div>
+                <div class="form-input"><span class="form-input-label">Ваш email*</span><input type="text" name="email" value="" class="required email"></div>
+                <div class="form-submit"><button type="submit" class="btn">Оставить заявку<svg><use xlink:href="images/sprite.svg#icon-btn"></use></svg></button></div>
+                <div class="form-policy">Нажимая кнопку, вы&nbsp;даёте согласие на&nbsp;обработку персональных данных.</div>
+            </div>
+        </form>
+    </div>
+</div>
