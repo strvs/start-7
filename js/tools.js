@@ -110,8 +110,12 @@ function initPage() {
     $('.main-prefs').each(function() {
         var curSection = $(this);
         var curSlider = curSection;
+        $('.main-prefs-fraction-count').html(String('0' + $('.main-prefs-item').length).slice(-2));
         var swiper = new Swiper(curSlider[0], {
             slidesPerView: 1,
+            pagination: {
+                el: $('.main-prefs .swiper-pagination')[0]
+            },
             breakpoints: {
                 768: {
                     slidesPerView: 2
@@ -120,12 +124,18 @@ function initPage() {
                     slidesPerView: 3
                 }
             },
+            on: {
+                slideChange: function () {
+                    $('.main-prefs-fraction-current').html(String('0' + (swiper.activeIndex + 1)).slice(-2));
+                },
+            },
         });
     });
 
     $('.main-catalogue').each(function() {
         var curSection = $(this);
         var curSlider = curSection.find('.catalogue');
+        $('.main-catalogue-fraction-count').html(String('0' + $('.catalogue-item').length).slice(-2));
         var swiper = new Swiper(curSlider[0], {
             slidesPerView: 1,
             breakpoints: {
@@ -140,12 +150,21 @@ function initPage() {
                 nextEl: $('.main-catalogue-arrows .swiper-button-next')[0],
                 prevEl: $('.main-catalogue-arrows .swiper-button-prev')[0]
             },
+            pagination: {
+                el: $('.main-catalogue .swiper-pagination')[0]
+            },
+            on: {
+                slideChange: function () {
+                    $('.main-catalogue-fraction-current').html(String('0' + (swiper.activeIndex + 1)).slice(-2));
+                },
+            },
         });
     });
 
     $('.main-types-header-slider-inner').each(function() {
         var curSection = $(this);
         var curSlider = curSection;
+        $('.main-types-fraction-count').html(String('0' + $('.main-types-header-slider-item').length).slice(-2));
         var swiper = new Swiper(curSlider[0], {
             slidesPerView: 1,
             breakpoints: {
@@ -157,6 +176,14 @@ function initPage() {
                 nextEl: $('.main-types-arrows .swiper-button-next')[0],
                 prevEl: $('.main-types-arrows .swiper-button-prev')[0]
             },
+            pagination: {
+                el: $('.main-types .swiper-pagination')[0]
+            },
+            on: {
+                slideChange: function () {
+                    $('.main-types-fraction-current').html(String('0' + (swiper.activeIndex + 1)).slice(-2));
+                },
+            },
         });
     });
 
@@ -165,6 +192,13 @@ function initPage() {
         var curSlider = curSection;
         var swiper = new Swiper(curSlider[0], {
             slidesPerView: 1,
+            navigation: {
+                nextEl: $('.main-reviews-arrows .swiper-button-next')[0],
+                prevEl: $('.main-reviews-arrows .swiper-button-prev')[0]
+            },
+            pagination: {
+                el: $('.main-reviews .swiper-pagination')[0]
+            },
             breakpoints: {
                 768: {
                     slidesPerView: 2
@@ -178,6 +212,10 @@ function initPage() {
         var curSlider = curSection;
         var swiper = new Swiper(curSlider[0], {
             slidesPerView: 'auto',
+            navigation: {
+                nextEl: $('.main-partners-arrows .swiper-button-next')[0],
+                prevEl: $('.main-partners-arrows .swiper-button-prev')[0]
+            },
             freeMode: true
         });
     });
@@ -276,6 +314,7 @@ function windowClose() {
 
 var mainWelcomeDigitsSwiper;
 var mainGeoInfoSwiper;
+var mainNewsSwiper;
 
 $(window).on('load resize', function() {
     if ($(window).width() > 1199) {
@@ -289,6 +328,12 @@ $(window).on('load resize', function() {
             var curSlider = $(this);
             if (curSlider.hasClass('swiper-initialized') && mainGeoInfoSwiper) {
                 mainGeoInfoSwiper.destroy();
+            }
+        });
+        $('.main-news-container').each(function() {
+            var curSlider = $(this);
+            if (curSlider.hasClass('swiper-initialized') && mainNewsSwiper) {
+                mainNewsSwiper.destroy();
             }
         });
     } else {
@@ -315,6 +360,27 @@ $(window).on('load resize', function() {
                         nextEl: $('.main-geo-info-next')[0],
                         prevEl: $('.main-geo-info-prev')[0]
                     },
+                });
+            }
+        });
+        $('.main-news-container').each(function() {
+            var curSlider = $(this);
+            if (!curSlider.hasClass('swiper-initialized')) {
+                mainNewsSwiper = new Swiper(curSlider[0], {
+                    slidesPerView: 1,
+                    loop: false,
+                    navigation: {
+                        nextEl: $('.main-news-arrows .swiper-button-next')[0],
+                        prevEl: $('.main-news-arrows .swiper-button-prev')[0]
+                    },
+                    pagination: {
+                        el: $('.main-news-container .swiper-pagination')[0]
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2
+                        }
+                    }
                 });
             }
         });

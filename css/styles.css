@@ -741,6 +741,8 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-prefs-item-number {position:absolute; right:0; top:0; width:80px; height:80px; display:flex; align-items:center; justify-content:center; font:32px/42px Gamestation, sans-serif; color:#E6EEF1}
 .main-prefs-item-title {font:30px/42px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
 .main-prefs-item-text {margin:16px 0 0 0; font-weight:600; font-size:16px; line-height:22px; color:#5D6D76}
+.main-prefs .swiper-pagination {display:none}
+.main-prefs-fraction {display:none}
 
 @media (max-width:1199px) {
     .main-prefs,
@@ -754,9 +756,26 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
     .main-prefs-item-text {font-size:15px; line-height:21px}
 }
 
+@media (max-width:767px) {
+    .main-prefs,
+    .main-prefs.swiper {margin:64px 0 0 0}
+    .main-prefs-item,
+    .main-prefs-item.swiper-slide {min-width:0; max-width:none; padding:0}
+    .main-prefs-item-wrap {-webkit-clip-path:polygon(45px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 46px) 100%, 0 100%, 0 78px); clip-path:polygon(45px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 46px) 100%, 0 100%, 0 78px)}
+    .main-prefs-item-container {padding:101px 21px 56px 21px; -webkit-clip-path:polygon(42px 0, 100% 0, 100% calc(100% - 77px), calc(100% - 43px) 100%, 0 100%, 0 75px); clip-path:polygon(42px 0, 100% 0, 100% calc(100% - 77px), calc(100% - 43px) 100%, 0 100%, 0 75px)}
+    .main-prefs-item-number {display:none}
+    .main-prefs-item-title {font-size:22px; line-height:31px}
+    .main-prefs .swiper-pagination.swiper-pagination-horizontal {display:flex; position:relative; margin:32px 0 0 0; width:auto; left:auto; top:auto; right:auto; bottom:auto; z-index:2}
+    .main-prefs .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; width:4px; height:4px; background:#DF2C31; opacity:1; margin:0 16px 0 0; border-radius:0; cursor:pointer; position:relative; transition:width 0.3s ease-in}
+    .main-prefs .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {width:48px}
+    .main-prefs-fraction {position:absolute; right:0; top:0; width:80px; height:80px; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:15px; line-height:21px; color:#B7C7D0; z-index:2}
+    .main-prefs-fraction-sep {width:1px; height:21px; margin:0 8px; background:#F4F7F8}
+}
+
 .main-catalogue {margin:120px 0 0 0}
 .main-catalogue-header {display:flex; position:relative}
 .main-catalogue-title {min-width:50%; max-width:50%; font:42px/55px Gamestation, sans-serif; color:#05171D; text-transform:uppercase}
+.main-catalogue-title em {font-style:normal}
 .main-catalogue-title span {vertical-align:top; font-size:22px; line-height:31px; color:#B7C7D0; margin:0 0 0 6px}
 .main-catalogue-text {min-width:50%; max-width:50%; padding:0 200px 0 12px; font:30px/42px Gamestation, sans-serif; color:#DF2C31; text-transform:uppercase}
 .main-catalogue-arrows {position:absolute; right:0; bottom:0; display:flex}
@@ -778,18 +797,21 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-catalogue .catalogue .swiper-wrapper {display:flex}
 .main-catalogue .catalogue-item,
 .main-catalogue .catalogue-item.swiper-slide {padding:0 12px; display:flex; height:auto}
+.main-catalogue .swiper-pagination {display:none}
+.main-catalogue-fraction {display:none}
 
 @media (max-width:1199px) {
     .main-catalogue {margin:96px 0 0 0}
     .main-catalogue-header {display:block}
     .main-catalogue-title {min-width:0; max-width:none; font-size:36px; line-height:47px}
+    .main-catalogue-detail .main-catalogue-title {font-size:30px; line-height:42px}
     .main-catalogue-title span {font-size:17px; line-height:24px; margin:0 0 0 8px}
     .main-catalogue-text {margin:24px 122px 0 0; min-width:0; max-width:none; padding:0; font-size:24px; line-height:34px}
     .main-catalogue-arrows-sep {height:40px}
     .main-catalogue-arrows .swiper-button-prev,
     .main-catalogue-arrows .swiper-button-next {width:48px; height:40px}
     .main-catalogue-arrows .swiper-button-prev svg,
-    .main-catalogue-arrows .swiper-button-next svg {width:24p; height:24px}
+    .main-catalogue-arrows .swiper-button-next svg {width:24px; height:24px}
     .main-catalogue .catalogue,
     .main-catalogue .catalogue.swiper {margin:80px -12px 0 -12px}
     .main-catalogue .catalogue-item {min-width:50%; max-width:50%}
@@ -798,6 +820,30 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
     .main-catalogue .catalogue-item-parent-preview {margin:0 -17px 0 0; min-height:152px}
     .main-catalogue .catalogue-item-parent-title {margin:24px 0 0 0; font-size:17px; line-height:24px}
     .main-catalogue .catalogue-item-parent-number {width:64px; height:64px; font-size:24px; line-height:34px}
+}
+
+@media (max-width:767px) {
+    .main-catalogue {margin:64px 0 0 0}
+    .main-catalogue-title {display:flex; font-size:30px; line-height:39px}
+    .main-catalogue-title em {max-width:221px}
+    .main-catalogue-detail .main-catalogue-title em {max-width:none}
+    .main-catalogue-text {margin:24px 102px 0 0; font-size:17px; line-height:24px}
+    .main-catalogue-detail .main-catalogue-arrows {display:none}
+    .main-catalogue .catalogue,
+    .main-catalogue .catalogue.swiper {margin:56px 0 0 0; overflow:hidden}
+    .main-catalogue .catalogue,
+    .main-catalogue .catalogue.swiper {margin:24px 0 0 0}
+    .main-catalogue .catalogue-item,
+    .main-catalogue .catalogue-item.swiper-slide {min-width:100%; max-width:100%; padding:0}
+    .main-catalogue .catalogue-item-parent {-webkit-clip-path:polygon(45px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 46px) 100%, 0 100%, 0 78px); clip-path:polygon(45px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 46px) 100%, 0 100%, 0 78px)}
+    .main-catalogue .catalogue-item-parent-container {padding:101px 29px 56px 29px; -webkit-clip-path:polygon(42px 0, 100% 0, 100% calc(100% - 77px), calc(100% - 43px) 100%, 0 100%, 0 75px); clip-path:polygon(42px 0, 100% 0, 100% calc(100% - 77px), calc(100% - 43px) 100%, 0 100%, 0 75px)}
+    .main-catalogue .catalogue-item-parent-preview {margin:0 -29px 0 0; min-height:144px}
+    .main-catalogue .catalogue-item-parent-number {display:none}
+    .main-catalogue .swiper-pagination.swiper-pagination-horizontal {display:flex; position:relative; margin:32px 0 0 0; width:auto; left:auto; top:auto; right:auto; bottom:auto; z-index:2}
+    .main-catalogue .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; width:4px; height:4px; background:#DF2C31; opacity:1; margin:0 16px 0 0; border-radius:0; cursor:pointer; position:relative; transition:width 0.3s ease-in}
+    .main-catalogue .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {width:48px}
+    .main-catalogue-fraction {position:absolute; right:0; top:0; width:80px; height:80px; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:15px; line-height:21px; color:#B7C7D0; z-index:2}
+    .main-catalogue-fraction-sep {width:1px; height:21px; margin:0 8px; background:#F4F7F8}
 }
 
 .main-geo {margin:176px -999px 192px -999px; display:flex; align-items:center; padding:96px 999px; background:#05171D url(../images/main-geo.png) no-repeat center top}
@@ -841,6 +887,19 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
     .main-geo-info-prev svg {width:32px; height:32px; fill:none; stroke:#CB181D; transform:scale(-1, 1)}
 }
 
+@media (max-width:767px) {
+    .main-geo {display:block; margin:64px -20px; padding:32px 20px 273px 20px; background:#05171D url(../images/main-geo-mobile.png) no-repeat right bottom}
+    .main-geo-container {min-width:0; max-width:none; padding:0}
+    .main-geo-title {max-width:none}
+    .main-geo-text {margin:40px 0 0 0}
+    .main-geo-btn {margin:32px 0 0 0}
+    .main-geo-info {position:relative; right:auto; top:auto; min-width:0; max-width:none; margin:48px 68px 0 0}
+    .main-geo-info-item.swiper-slide {padding:0}
+    .main-geo-info-next {right:-88px}
+    .main-geo-info-arrows-sep {right:-88px}
+    .main-geo-info-prev {right:-88px}
+}
+
 .main-types {margin:120px 0 0 0; position:relative; padding:72px 0 58px 0}
 .main-types::before {content:""; position:absolute; left:50%; top:0; margin:0 0 0 252px; width:1040px; height:900px; background:url(../images/main-types.svg) no-repeat; pointer-events:none}
 .main-types-header {display:flex; position:relative}
@@ -862,6 +921,8 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
     .main-types-header-slider-item a:hover .main-types-header-slider-item-img::after {opacity:0}
 }
 .main-types-header-slider-item-number {position:absolute; right:0; top:0; display:flex; align-items:center; justify-content:center; width:80px; height:80px; font:32px/42px Gamestation, sans-serif; text-transform:uppercase; color:#E6EEF1}
+.main-types .swiper-pagination {display:none}
+.main-types-fraction {display:none}
 .main-types-bottom {margin:120px 0 0 0; display:flex; justify-content:space-between}
 .main-types-bottom-item {min-width:calc(50% - 12px); max-width:calc(50% - 12px); padding:0 8.46% 0 0}
 .main-types-bottom-item-title {font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
@@ -900,6 +961,31 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
     .main-types-bottom-item-text {margin:32px 0 0 0; font-size:17px; line-height:24px}
 }
 
+@media (max-width:767px) {
+    .main-types {margin:64px 0 0 0}
+    .main-types-header-text {margin:0 102px 0 0}
+    .main-types-title {font-size:30px; line-height:39px}
+    .main-types-subtitle {font-size:17px; line-height:24px}
+    .main-types-arrows {right:-102px}
+    .main-types-header-slider {margin:48px 0 0 0}
+    .main-types-header-slider-item-number {display:none}
+    .main-types-header-slider-item {min-width:100%; max-width:100%}
+    .main-types-header-slider-item a {margin:0}
+    .main-types-header-slider-item-img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+    .main-types .swiper-pagination.swiper-pagination-horizontal {display:flex; position:relative; margin:32px 0 0 0; width:auto; left:auto; top:auto; right:auto; bottom:auto; z-index:2}
+    .main-types .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; width:4px; height:4px; background:#DF2C31; opacity:1; margin:0 16px 0 0; border-radius:0; cursor:pointer; position:relative; transition:width 0.3s ease-in}
+    .main-types .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {width:48px}
+    .main-types-fraction {position:absolute; right:0; top:0; width:66px; height:24px; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:15px; line-height:21px; color:#B7C7D0; z-index:2; background:#FFFFFF}
+    .main-types-fraction-sep {width:1px; height:21px; margin:0 8px; background:#F4F7F8}
+    .main-types-bottom {margin:56px 0 0 0; display:block}
+    .main-types-bottom-item {min-width:0; max-width:none; padding:0; margin:40px 0 0 0}
+    .main-types-bottom-item-title {font-size:22px; line-height:31px}
+    .main-types-bottom-item-text {margin:24px 0 0 0; font-size:15px; line-height:21px}
+    .main-types-bottom-item-link {margin:40px 0 0 0}
+    .main-types-bottom-item-link a {height:auto; font-size:14px; line-height:20px; letter-spacing:0.02em}
+    .main-types-bottom-item-link a svg {margin:-2px 0 0 6px; width:16px; height:16px}
+}
+
 .main-news {margin:120px 0 0 0; display:flex; justify-content:space-between; align-items:flex-start}
 .main-news-header {min-width:504px; max-width:504px}
 .main-news-header-inner {position:relative; width:504px}
@@ -909,6 +995,7 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-news-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
 .main-news-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px; color:#B7C7D0}
 .main-news-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-news-arrows {display:none}
 .main-news-container,
 .main-news-container.swiper {margin:0 0 0 10%; width:100%}
 .main-news-container .news,
@@ -922,6 +1009,7 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-news-container .news-item-preview {min-width:42.66%; max-width:42.66%}
 .main-news-container .news-item-title {min-width:57.34%; max-width:57.34%; font-size:24px; line-height:34px; max-height:102px}
 .main-news-container .news-item-icon {top:24px}
+.main-news-container .swiper-pagination {display:none}
 
 @media (max-width:1199px) {
     .main-news {margin:96px 0 0 0; display:block}
@@ -929,9 +1017,44 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
     .main-news-header-inner {width:auto; margin-top:0 !important; margin-right:122px; position:relative}
     .main-news-title {font-size:36px; line-height:47px}
     .main-news-title strong {font-size:17px; line-height:24px}
+    .main-news-arrows {position:absolute; right:-122px; bottom:0; display:flex}
+    .main-news-arrows-sep {min-width:2px; max-width:2px; height:40px; background:#F4F7F8}
+    .main-news-arrows .swiper-button-prev,
+    .main-news-arrows .swiper-button-next {position:relative; z-index:2; top:auto; width:48px; height:40px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transpanret; transform:none; opacity:1; transition:none; display:flex; align-items:center; justify-content:center}
+    .main-news-arrows .swiper-button-prev::after,
+    .main-news-arrows .swiper-button-next::after {display:none}
+    .main-news-arrows .swiper-button-prev {left:auto}
+    .main-news-arrows .swiper-button-next {right:auto}
+    .main-news-arrows .swiper-button-prev svg,
+    .main-news-arrows .swiper-button-next svg {display:block; width:24px; height:24px; margin:0; fill:none; stroke:#B7C7D0; transition:stroke 0.3s ease-in}
     .main-news-subtitle {margin:24px 0 0 0; font-size:24px; line-height:34px}
+    .main-news-container,
+    .main-news-container.swiper {width:auto; margin:80px 0 0 -24px}
     .main-news-container .news,
-    .main-news-container .news.swiper-wrapper {margin:0; display:flex}
+    .main-news-container .news.swiper-wrapper {margin:0; display:flex; flex-wrap:nowrap}
+    .main-news-container .news-item,
+    .main-news-container .news-item.swiper-slide {min-width:50%; max-width:50%; margin:0}
+    .main-news-container .news-item-container {margin:0 0 0 24px}
+    .main-news-container .news-item-title {margin:24px 0 0 0}
+    .main-news-container .news-item-date {min-width:0; max-width:none}
+    .main-news-container .news-item-preview {min-width:0; max-width:none}
+    .main-news-container .news-item-title {min-width:0; max-width:none; font-size:17px; line-height:24px; max-height:96px}
+}
+
+@media (max-width:767px) {
+    .main-news {margin:64px 0 0 0}
+    .main-news-header-inner {margin-right:102px}
+    .main-news-title {font-size:30px; line-height:39px}
+    .main-news-arrows {right:-102px}
+    .main-news-subtitle {font-size:17px; line-height:24px}
+    .main-news-container .swiper-pagination.swiper-pagination-horizontal {display:flex; position:relative; margin:32px 0 0 0; width:auto; left:auto; top:auto; right:auto; bottom:auto; z-index:2}
+    .main-news-container .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; width:4px; height:4px; background:#DF2C31; opacity:1; margin:0 16px 0 0; border-radius:0; cursor:pointer; position:relative; transition:width 0.3s ease-in}
+    .main-news-container .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {width:48px}
+    .main-news-container,
+    .main-news-container.swiper {margin:48px 0 0 0}
+    .main-news-container .news-item,
+    .main-news-container .news-item.swiper-slide {min-width:100%; max-width:100%}
+    .main-news-container .news-item-container {margin:0; padding:15px 0 22px 0}
 }
 
 .main-reviews {margin:120px 0 0 0; display:flex; position:relative; padding:72px 0}
@@ -939,10 +1062,47 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-reviews-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
 .main-reviews-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px}
 .main-reviews-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-reviews-arrows {display:none}
 .main-reviews-slider {width:100%; position:relative; overflow:hidden}
 .main-reviews-slider-inner .swiper-wrapper {display:flex}
 .main-reviews-slider-item {min-width:50%; max-width:50%}
 .main-reviews-slider-item .reviews-item-wrap {width:auto; margin:0 0 0 24px}
+.main-reviews-slider .swiper-pagination {display:none}
+
+@media (max-width:1199px) {
+    .main-reviews {margin:96px 0 0 0; display:block; padding:0}
+    .main-reviews-header {min-width:0; max-width:none; margin:0 122px 0 0; position:relative}
+    .main-reviews-title {font-size:36px; line-height:47px}
+    .main-reviews-title strong {font-size:17px; line-height:24px}
+    .main-reviews-subtitle {margin:24px 0 0 0; font-size:24px; line-height:36px}
+    .main-reviews-arrows {position:absolute; right:-122px; bottom:0; display:flex}
+    .main-reviews-arrows-sep {min-width:2px; max-width:2px; height:40px; background:#F4F7F8}
+    .main-reviews-arrows .swiper-button-prev,
+    .main-reviews-arrows .swiper-button-next {position:relative; z-index:2; top:auto; width:48px; height:40px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transpanret; transform:none; opacity:1; transition:none; display:flex; align-items:center; justify-content:center}
+    .main-reviews-arrows .swiper-button-prev::after,
+    .main-reviews-arrows .swiper-button-next::after {display:none}
+    .main-reviews-arrows .swiper-button-prev {left:auto}
+    .main-reviews-arrows .swiper-button-next {right:auto}
+    .main-reviews-arrows .swiper-button-prev svg,
+    .main-reviews-arrows .swiper-button-next svg {display:block; width:24px; height:24px; margin:0; fill:none; stroke:#B7C7D0; transition:stroke 0.3s ease-in}
+    .main-reviews-slider {margin:80px 0 0 -24px; width:auto}
+}
+
+@media (max-width:767px) {
+    .main-reviews {margin:64px 0 0 0}
+    .main-reviews-header {margin-right:102px}
+    .main-reviews-title {font-size:30px; line-height:39px}
+    .main-reviews-subtitle {font-size:17px; line-height:24px}
+    .main-reviews-arrows {right:-102px}
+    .main-reviews-slider {margin:56px 0 0 0}
+    .main-reviews-slider-item {min-width:100%; max-width:100%}
+    .main-reviews-slider-item .reviews-item-wrap {margin:0}
+    .main-reviews-slider-item .reviews-item-container {padding:3px; background:#F4F7F8; display:flex; -webkit-clip-path:polygon(45px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 46px) 100%, 0 100%, 0 78px); clip-path:polygon(45px 0, 100% 0, 100% calc(100% - 80px), calc(100% - 46px) 100%, 0 100%, 0 78px)}
+    .main-reviews-slider-item .reviews-item-content {background:#FFFFFF; display:flex; width:100%; -webkit-clip-path:polygon(42px 0, 100% 0, 100% calc(100% - 77px), calc(100% - 43px) 100%, 0 100%, 0 75px); clip-path:polygon(42px 0, 100% 0, 100% calc(100% - 77px), calc(100% - 43px) 100%, 0 100%, 0 75px); padding:69px 13px 11px 13px; border-bottom:none}
+    .main-reviews-slider .swiper-pagination.swiper-pagination-horizontal {display:flex; position:relative; margin:32px 0 0 0; width:auto; left:auto; top:auto; right:auto; bottom:auto; z-index:2}
+    .main-reviews-slider .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet {display:block; width:4px; height:4px; background:#DF2C31; opacity:1; margin:0 16px 0 0; border-radius:0; cursor:pointer; position:relative; transition:width 0.3s ease-in}
+    .main-reviews-slider .swiper-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active {width:48px}
+}
 
 .main-partners {margin:120px 0 0 0; display:flex; position:relative}
 .main-partners-header {min-width:504px; max-width:504px; background:#FFFFFF; position:relative; z-index:2}
@@ -950,6 +1110,7 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-partners-title {display:flex; font:42px/55px Gamestation, sans-serif; text-transform:uppercase; color:#05171D}
 .main-partners-title strong {font-weight:normal; margin:0 0 0 8px; font-size:22px; line-height:31px}
 .main-partners-subtitle {margin:16px 0 0 0; font:30px/42px Gamestation, sans-serif; text-transform:uppercase; color:#DF2C31}
+.main-partners-arrows {display:none}
 .main-partners-slider {width:calc(100% - 504px); position:relative}
 .main-partners-slider-inner.swiper {width:100%; overflow:visible}
 .main-partners-slider-inner .swiper-wrapper {display:flex}
@@ -959,6 +1120,39 @@ header.header-main.fixed .logo svg:nth-child(2) {display:none}
 .main-partners-slider-item-inner img {display:block; width:100%; border-radius:8px; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -ms-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%); filter:gray; transition:all 0.3s ease-in}
 @media (min-width:1200px) {
     .main-partners-slider-item-inner:hover img {-webkit-filter:none; -moz-filter:none; -ms-filter:none; -o-filter:none; filter:none; filter:none}
+}
+
+@media (max-width:1199px) {
+    .main-partners {margin:96px 0 0 0; display:block}
+    .main-partners-header {min-width:0; max-width:none; margin:0 122px 0 0; position:relative}
+    .main-partners-header::before {display:none}
+    .main-partners-title {font-size:36px; line-height:47px}
+    .main-partners-title strong {font-size:17px; line-height:24px}
+    .main-partners-subtitle {margin:24px 0 0 0; font-size:24px; line-height:36px}
+    .main-partners-arrows {position:absolute; right:-122px; bottom:0; display:flex}
+    .main-partners-arrows-sep {min-width:2px; max-width:2px; height:40px; background:#F4F7F8}
+    .main-partners-arrows .swiper-button-prev,
+    .main-partners-arrows .swiper-button-next {position:relative; z-index:2; top:auto; width:48px; height:40px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transpanret; transform:none; opacity:1; transition:none; display:flex; align-items:center; justify-content:center}
+    .main-partners-arrows .swiper-button-prev::after,
+    .main-partners-arrows .swiper-button-next::after {display:none}
+    .main-partners-arrows .swiper-button-prev {left:auto}
+    .main-partners-arrows .swiper-button-next {right:auto}
+    .main-partners-arrows .swiper-button-prev svg,
+    .main-partners-arrows .swiper-button-next svg {display:block; width:24px; height:24px; margin:0; fill:none; stroke:#B7C7D0; transition:stroke 0.3s ease-in}
+    .main-partners-slider {margin:80px 0 0 -24px; width:auto}
+    .main-partners-slider-inner.swiper {width:auto}
+    .main-partners-slider-item {min-width:192px; max-width:192px}
+}
+
+@media (max-width:767px) {
+    .main-partners {margin:64px 0 0 0}
+    .main-partners-header {margin-right:102px}
+    .main-partners-title {font-size:30px; line-height:39px}
+    .main-partners-subtitle {font-size:17px; line-height:24px}
+    .main-partners-arrows {right:-102px}
+    .main-partners-slider {margin:56px 0 0 -16px}
+    .main-partners-slider-item {min-width:240px; max-width:240px}
+    .main-partners-slider-item-inner {margin:0 0 0 16px}
 }
 
 .feedback {margin:120px 0 0 0; padding:50px 0; display:flex; align-items:center}
